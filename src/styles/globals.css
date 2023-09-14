@@ -21,3 +21,35 @@ main {
   display: grid;
   grid-template-rows: auto 1fr;
 }
+
+button,
+.linkAsButton {
+  background-color: #56ca92;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+.linkAsButton:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+button:active,
+.linkAsButton:active {
+  transform: scale(0.98);
+}
+
+button:focus,
+.linkAsButton:focus {
+  outline: 2px solid #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
