@@ -1,0 +1,36 @@
+.aboutContent {
+  padding: 3rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-column: 1 / -1;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.section:nth-child(odd) {
+  grid-template-areas: 'image copy copy';
+  padding-right: 4rem;
+}
+
+.section:nth-child(even) {
+  grid-template-areas: 'copy copy image';
+  padding-left: 4rem;
+}
+
+.imageWrapper {
+  grid-area: image;
+}
+
+.sectionContent {
+  grid-area: copy;
+  .copy {
+    padding: 1rem 0;
+  }
+}
