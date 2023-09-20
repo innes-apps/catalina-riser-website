@@ -16,12 +16,12 @@ const lato = Lato({
 const rofane = localFont({
   src: [
     {
-      path: '../../public/fonts/Rofane.woff2',
+      path: '../../public/fonts/Rofane.otf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/Rofane-Italic.woff2',
+      path: '../../public/fonts/Rofane-Italic.otf',
       weight: '400',
       style: 'italic',
     },
