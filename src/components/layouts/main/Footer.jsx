@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { lato } from '@/utils/font-loader';
 
 import styles from './MainLayout.module.css';
 
@@ -12,7 +13,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${lato.className}`}>
       <p>&copy; {currentYear} Catalina Riser</p>
     </footer>
   );
