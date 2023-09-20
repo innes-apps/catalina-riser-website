@@ -1,4 +1,9 @@
 :root {
+  /* Base Color Pallet */
+  --color-bud: #9fa79b;
+  --color-tiara: #ccd3d4;
+  --color-irish-coffee: #643424;
+  --color-russett: #7f615b;
 }
 
 html {
