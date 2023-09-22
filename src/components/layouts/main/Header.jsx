@@ -14,7 +14,7 @@ export default function Header() {
         </nav>
 
         <Image
-          src={'/img/Logo Circle_transp.png'}
+          src={'/img/Logo_Circle_transp.png'}
           alt="Catalina Riser Yoga Logo"
           width={150}
           height={150}
