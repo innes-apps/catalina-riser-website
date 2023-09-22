@@ -88,12 +88,10 @@
     border-top: 2px solid var(--color-irish-coffee);
     border-right: 1px solid var(--color-irish-coffee);
     border-bottom: 2px solid var(--color-irish-coffee);
-    border-left: 2px solid var(--color-irish-coffee);
   }
 
   .mobileNav a:last-of-type {
     border-top: 2px solid var(--color-irish-coffee);
-    border-right: 2px solid var(--color-irish-coffee);
     border-bottom: 2px solid var(--color-irish-coffee);
     border-left: 1px solid var(--color-irish-coffee);
   }
