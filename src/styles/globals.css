@@ -4,6 +4,8 @@
   --color-tiara: #ccd3d4;
   --color-irish-coffee: #643424;
   --color-russett: #7f615b;
+  --color-morning-blue: #86999f;
+  --color-slate-gray: #647792;
 }
 
 html {
@@ -29,8 +31,9 @@ main {
 
 button,
 .linkAsButton {
-  background-color: #56ca92;
-  border: 1px solid #333;
+  background-color: var(--color-bud);
+  border: 1px solid var(--color-irish-coffee);
+  color: #000000;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -40,7 +43,7 @@ button,
 
 button:hover,
 .linkAsButton:hover {
-  background-color: #333;
+  background-color: var(--color-irish-coffee);
   color: #fff;
 }
 

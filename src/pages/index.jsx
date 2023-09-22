@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
+import { rofane } from '@/utils/font-loader';
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
 
       <div className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>Katie Innes</h1>
+          <h1 className={`${styles.title} ${rofane.className}`}>Katie Innes</h1>
           <p className={styles.description}>The sun slowly rises casting light on the mountain,</p>
           <p className={styles.description}>Bringing with it a sense of peace and calm.</p>
         </div>
@@ -28,7 +29,7 @@ export default function Home() {
             <img src="https://picsum.photos/300" />
           </div>
           <div className={styles.sectionContent}>
-            <h2>About</h2>
+            <h2 className={rofane.className}>About</h2>
             <p className={styles.copy}>
               Katie Innes is a certified yoga instructor based in Tucson, Arizona. She has been
               practicing yoga for over 10 years and has been teaching for 3 years. She is a 200 hour
@@ -48,7 +49,7 @@ export default function Home() {
             <img src="https://picsum.photos/300" />
           </div>
           <div className={styles.sectionContent}>
-            <h2>Offerings</h2>
+            <h2 className={rofane.className}>Offerings</h2>
             <p className={styles.copy}>
               Katie offers a variety of classes including vinyasa, hatha, yin, and restorative. She
               also offers private sessions and workshops. She is passionate about making yoga
