@@ -67,7 +67,6 @@
 }
 
 @media screen and (max-width: 650px) {
-  /** working on Mobile styling */
   .hero {
     width: 100%;
     color: #333;
@@ -98,6 +97,7 @@
     align-items: center;
     margin-bottom: 2rem;
   }
+
   .section:nth-child(odd),
   .section:nth-child(even) {
     justify-items: center;

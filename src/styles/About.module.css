@@ -18,12 +18,10 @@
 
 .section:nth-child(odd) {
   grid-template-areas: 'image copy copy';
-  padding-right: 4rem;
 }
 
 .section:nth-child(even) {
   grid-template-areas: 'copy copy image';
-  padding-left: 4rem;
 }
 
 .imageWrapper {
@@ -34,5 +32,23 @@
   grid-area: copy;
   .copy {
     padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .section:nth-child(odd),
+  .section:nth-child(even) {
+    justify-items: center;
+    grid-template-areas:
+      'image'
+      'copy';
   }
 }
