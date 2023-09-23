@@ -13,13 +13,15 @@ export default function Header() {
           <Link href="/about">About</Link>
         </nav>
 
-        <Image
-          src={'/img/Logo_Circle_transp.png'}
-          alt="Catalina Riser Yoga Logo"
-          width={150}
-          height={150}
-          className={styles.logo}
-        />
+        <Link href="/">
+          <Image
+            src={'/img/Logo_Circle_transp.png'}
+            alt="Catalina Riser Yoga Logo"
+            width={150}
+            height={150}
+            className={styles.logo}
+          />
+        </Link>
 
         <nav className={styles.rightNav} aria-label="right of logo nav">
           <Link href="/contact">Contact</Link>
@@ -27,13 +29,15 @@ export default function Header() {
       </header>
       <header className={`${styles.mobileHeader} ${rofane.className}`}>
         <div className={styles.mobileBanner}>
-          <Image
-            src={'/img/Logo_Full.png'}
-            alt="Catalina Riser Yoga Logo"
-            width={257}
-            height={150}
-            className={styles.logo}
-          />
+          <Link href="/">
+            <Image
+              src={'/img/Logo_Full.png'}
+              alt="Catalina Riser Yoga Logo"
+              width={257}
+              height={150}
+              className={styles.logo}
+            />
+          </Link>
         </div>
 
         <nav className={styles.mobileNav}>
