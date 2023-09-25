@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '@/styles/Contact.module.css';
 
@@ -35,7 +37,7 @@ export default function Contact() {
           <div className={styles.cta}>
             <p className={styles.copy}>Follow me for the latest announcements!</p>
             <Link href="https://www.instagram.com/catalinariser/" className="linkAsButton">
-              @catalinariseryoga &gt;
+              @catalinariseryoga <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
             </Link>
           </div>
           <div className={styles.cta}>
@@ -44,7 +46,7 @@ export default function Contact() {
               href="https://docs.google.com/forms/d/e/1FAIpQLScTVfIdHLEsVNTfGQkUvQTDQmtNtzcMgMAj4qxMlSFZAeabHw/viewform?usp=sf_link"
               className="linkAsButton"
             >
-              Get in touch! &gt;
+              Get in touch! <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
             </Link>
           </div>
         </section>

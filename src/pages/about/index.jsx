@@ -2,6 +2,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { rofane } from '@/utils/font-loader';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import styles from '@/styles/About.module.css';
 
 export default function About() {
@@ -64,7 +66,7 @@ export default function About() {
               safe space for her students to explore their practice.
             </p>
             <Link href="/contact" className="linkAsButton">
-              Get in touch &gt;
+              Get in touch <FontAwesomeIcon icon={faAngleRight} size="sm" />
             </Link>
           </div>
         </section>
