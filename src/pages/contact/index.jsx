@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '@/styles/Contact.module.css';
 

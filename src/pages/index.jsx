@@ -2,6 +2,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
 import styles from '@/styles/Home.module.css';
 import { rofane } from '@/utils/font-loader';
 
@@ -39,7 +42,7 @@ export default function Home() {
               safe space for her students to explore their practice.
             </p>
             <Link href="/about" className="linkAsButton">
-              Learn more &gt;
+              Learn more <FontAwesomeIcon icon={faAngleRight} size="sm" />
             </Link>
           </div>
         </section>
@@ -57,7 +60,7 @@ export default function Home() {
               practice.
             </p>
             <Link href="/about" className="linkAsButton">
-              Get in touch &gt;
+              Get in touch <FontAwesomeIcon icon={faAngleRight} size="sm" />
             </Link>
           </div>
         </section>
@@ -65,7 +68,7 @@ export default function Home() {
         <section className={styles.socialMedia}>
           <p>Follow Me!</p>
           <Link href="https://www.instagram.com/catalinariser/" className="linkAsButton">
-            @catalinariseryoga &gt;
+            @catalinariseryoga <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
           </Link>
         </section>
       </div>
