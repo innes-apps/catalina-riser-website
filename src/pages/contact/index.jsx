@@ -24,12 +24,14 @@ export default function Contact() {
           <div className={styles.sectionContent}>
             <h2>Why work with me?</h2>
             <p className={styles.copy}>
-              Katie Innes is a certified yoga instructor based in Tucson, Arizona. She has been
-              practicing yoga for over 10 years and has been teaching for 3 years. She is a 200 hour
-              RYT and has completed her 300 hour training. She is also a certified prenatal yoga
-              instructor. She teaches a variety of styles including vinyasa, hatha, yin, and
-              restorative. She is passionate about making yoga accessible to everyone and creating a
-              safe space for her students to explore their practice.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quis? Illo sint ipsam
+              adipisci error, autem, quos cum placeat modi impedit totam voluptas unde qui mollitia
+              deleniti? Amet, reprehenderit molestias. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Non, quis? Illo sint ipsam adipisci error, autem, quos cum placeat
+              modi impedit totam voluptas unde qui mollitia deleniti? Amet, reprehenderit molestias.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quis? Illo sint ipsam
+              adipisci error, autem, quos cum placeat modi impedit totam voluptas unde qui mollitia
+              deleniti? Amet, reprehenderit molestias.
             </p>
           </div>
         </section>

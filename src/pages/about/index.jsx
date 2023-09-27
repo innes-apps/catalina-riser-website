@@ -24,12 +24,12 @@ export default function About() {
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Personal Story pt. 1</h2>
             <p className={styles.copy}>
-              Katie Innes is a certified yoga instructor based in Tucson, Arizona. She has been
-              practicing yoga for over 10 years and has been teaching for 3 years. She is a 200 hour
-              RYT and has completed her 300 hour training. She is also a certified prenatal yoga
-              instructor. She teaches a variety of styles including vinyasa, hatha, yin, and
-              restorative. She is passionate about making yoga accessible to everyone and creating a
-              safe space for her students to explore their practice.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio fuga
+              ratione laboriosam consectetur inventore, ipsum nulla repudiandae aut expedita nam.
+              Omnis totam nam ex mollitia alias ratione asperiores aliquid. Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Nihil, distinctio fuga ratione laboriosam
+              consectetur inventore, ipsum nulla repudiandae aut expedita nam. Omnis totam nam ex
+              mollitia alias ratione asperiores aliquid.
             </p>
           </div>
         </section>
@@ -41,12 +41,17 @@ export default function About() {
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Personal Story pt. 2</h2>
             <p className={styles.copy}>
-              Katie Innes is a certified yoga instructor based in Tucson, Arizona. She has been
-              practicing yoga for over 10 years and has been teaching for 3 years. She is a 200 hour
-              RYT and has completed her 300 hour training. She is also a certified prenatal yoga
-              instructor. She teaches a variety of styles including vinyasa, hatha, yin, and
-              restorative. She is passionate about making yoga accessible to everyone and creating a
-              safe space for her students to explore their practice.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde qui hic facere vero
+              voluptatum quo, eius expedita cumque incidunt, molestias suscipit obcaecati.
+              Praesentium, veritatis ipsum odio nobis cumque sunt deserunt voluptatum, quidem,
+              voluptatibus quod quibusd am quos. Quisquam, quod. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Unde qui hic facere vero voluptatum quo, eius expedita
+              cumque incidunt, molestias suscipit obcaecati. Praesentium, veritatis ipsum odio nobis
+              cumque sunt deserunt voluptatum, quidem, voluptatibus quod quibusd am quos. Quisquam,
+              quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde qui hic facere
+              vero voluptatum quo, eius expedita cumque incidunt, molestias suscipit obcaecati.
+              Praesentium, veritatis ipsum odio nobis cumque sunt deserunt voluptatum, quidem,
+              voluptatibus quod quibusd am quos. Quisquam, quod.
             </p>
           </div>
         </section>
@@ -58,12 +63,9 @@ export default function About() {
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Philosophy and Offerings</h2>
             <p className={styles.copy}>
-              Katie Innes is a certified yoga instructor based in Tucson, Arizona. She has been
-              practicing yoga for over 10 years and has been teaching for 3 years. She is a 200 hour
-              RYT and has completed her 300 hour training. She is also a certified prenatal yoga
-              instructor. She teaches a variety of styles including vinyasa, hatha, yin, and
-              restorative. She is passionate about making yoga accessible to everyone and creating a
-              safe space for her students to explore their practice.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquam? Distinctio
+              nesciunt consequatur sapiente inventore aliquam accusamus, exercitationem, iure veniam
+              facilis illo sequi ipsa obcaecati officia itaque placeat aliquid repellendus.
             </p>
             <Link href="/contact" className="linkAsButton">
               Get in touch <FontAwesomeIcon icon={faAngleRight} size="sm" />
