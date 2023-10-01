@@ -1,12 +1,12 @@
 .hero {
   width: 100%;
   color: #333;
-  height: auto;
+  height: 64vw; /* This height is set to match the ratio of the background image used, can be removed if different image method is selected */
   grid-column: 1 / -1;
-  background-image: url('https://picsum.photos/1500/700');
+  background-image: url('/img/home_hero.jpg');
+  background-size: cover;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  min-height: 700px;
   align-items: center;
   justify-items: center;
 }
@@ -66,16 +66,21 @@
   border-top: 1px solid #333;
 }
 
+@media screen and (min-width: 1025px) {
+  .hero {
+    background-image: url('/img/home_hero_xl.jpg');
+  }
+}
+
 @media screen and (max-width: 650px) {
   .hero {
     width: 100%;
     color: #333;
-    height: auto;
+    height: 134vw;
     grid-column: 1 / -1;
-    background-image: url('https://picsum.photos/1500/700');
+    background-image: url('/img/home_hero_mobile.jpg');
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    min-height: 700px;
     align-items: end;
     justify-items: stretch;
   }
