@@ -27,7 +27,7 @@ export default function About() {
           <div className={styles.imageWrapper}>
             <Image
               src={aboutImage1}
-              alt="Katie Innes posing against railing"
+              alt="Katie posing in the morning light"
               width={300}
               height={462}
               placeholder="blur"
@@ -50,7 +50,7 @@ export default function About() {
           <div className={styles.imageWrapper}>
             <Image
               src={aboutImage2}
-              alt="Katie Innes posing against railing"
+              alt="Katie in crow pose"
               width={300}
               height={462}
               placeholder="blur"
@@ -78,7 +78,7 @@ export default function About() {
           <div className={styles.imageWrapper}>
             <Image
               src={aboutImage3}
-              alt="Katie Innes posing against railing"
+              alt="Katie meditating in the morning sunlight"
               width={300}
               height={462}
               placeholder="blur"

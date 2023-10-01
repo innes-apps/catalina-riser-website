@@ -24,7 +24,7 @@ export default function Contact() {
           <div className={styles.imageWrapperMain}>
             <Image
               src={contactImage1}
-              alt="Katie Innes smiling in pigeon pose"
+              alt="Katie smiling in pigeon pose"
               width={505}
               height={520}
               placeholder="blur"
@@ -33,7 +33,7 @@ export default function Contact() {
           <div className={styles.imageWrapperSmall}>
             <Image
               src={contactImage1}
-              alt="Katie Innes smiling in pigeon pose"
+              alt="Katie smiling in pigeon pose"
               width={305}
               height={320}
               placeholder="blur"

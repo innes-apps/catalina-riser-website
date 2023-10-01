@@ -33,7 +33,7 @@ export default function Home() {
           <div className={styles.imageWrapper}>
             <Image
               src={homeImgAbout}
-              alt="Katie Innes posing against railing"
+              alt="Katie posing against a railing"
               width={300}
               height={462}
               placeholder="blur"
@@ -61,7 +61,7 @@ export default function Home() {
           <div className={styles.imageWrapper}>
             <Image
               src={homeImgOfferings}
-              alt="Katie Innes in a yoga pose with mesquite trees in the background"
+              alt="Katie in a yoga pose with mesquite trees in the background"
               width={300}
               height={462}
               placeholder="blur"
