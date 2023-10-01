@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { rofane } from '@/utils/font-loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
+import Image from 'next/image';
+import aboutImage1 from '../../../public/img/about_1.jpg';
+import aboutImage2 from '../../../public/img/about_2.jpg';
+import aboutImage3 from '../../../public/img/about_3.jpg';
+
 import styles from '@/styles/About.module.css';
 
 export default function About() {
@@ -19,7 +25,13 @@ export default function About() {
       <div className={styles.aboutContent}>
         <section className={styles.section}>
           <div className={styles.imageWrapper}>
-            <img src="https://picsum.photos/300?random=1&grayscale" />
+            <Image
+              src={aboutImage1}
+              alt="Katie Innes posing against railing"
+              width={300}
+              height={462}
+              placeholder="blur"
+            />
           </div>
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Personal Story pt. 1</h2>
@@ -36,7 +48,13 @@ export default function About() {
 
         <section className={styles.section}>
           <div className={styles.imageWrapper}>
-            <img src="https://picsum.photos/300?random=2" />
+            <Image
+              src={aboutImage2}
+              alt="Katie Innes posing against railing"
+              width={300}
+              height={462}
+              placeholder="blur"
+            />
           </div>
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Personal Story pt. 2</h2>
@@ -58,7 +76,13 @@ export default function About() {
 
         <section className={styles.section}>
           <div className={styles.imageWrapper}>
-            <img src="https://picsum.photos/300?random=3&blur=3" />
+            <Image
+              src={aboutImage3}
+              alt="Katie Innes posing against railing"
+              width={300}
+              height={462}
+              placeholder="blur"
+            />
           </div>
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Philosophy and Offerings</h2>
