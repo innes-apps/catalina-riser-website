@@ -31,6 +31,7 @@ export default function About() {
               width={300}
               height={462}
               placeholder="blur"
+              priority
             />
           </div>
           <div className={styles.sectionContent}>

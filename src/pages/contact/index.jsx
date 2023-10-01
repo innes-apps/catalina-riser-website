@@ -28,6 +28,7 @@ export default function Contact() {
               width={505}
               height={520}
               placeholder="blur"
+              priority
             />
           </div>
           <div className={styles.imageWrapperSmall}>
