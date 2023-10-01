@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
+import Image from 'next/image';
+import contactImage1 from '../../../public/img/contact_1.jpg';
+
 import styles from '@/styles/Contact.module.css';
 
 export default function Contact() {
@@ -18,8 +21,23 @@ export default function Contact() {
 
       <div className={styles.aboutContent}>
         <section className={styles.section}>
-          <div className={styles.imageWrapper}>
-            <img src="https://picsum.photos/800/300?random=1&grayscale&blur" />
+          <div className={styles.imageWrapperMain}>
+            <Image
+              src={contactImage1}
+              alt="Katie Innes smiling in pigeon pose"
+              width={505}
+              height={520}
+              placeholder="blur"
+            />
+          </div>
+          <div className={styles.imageWrapperSmall}>
+            <Image
+              src={contactImage1}
+              alt="Katie Innes smiling in pigeon pose"
+              width={305}
+              height={320}
+              placeholder="blur"
+            />
           </div>
           <div className={styles.sectionContent}>
             <h2>Why work with me?</h2>
