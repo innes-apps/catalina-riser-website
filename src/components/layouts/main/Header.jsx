@@ -20,6 +20,7 @@ export default function Header() {
             width={150}
             height={150}
             className={styles.logo}
+            priority
           />
         </Link>
 
@@ -36,6 +37,7 @@ export default function Header() {
               width={257}
               height={150}
               className={styles.logo}
+              priority
             />
           </Link>
         </div>
