@@ -61,3 +61,11 @@ a {
   color: #333;
   text-decoration: none;
 }
+
+h1.pageHeader {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}

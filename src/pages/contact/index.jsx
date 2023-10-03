@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
+import { rofane } from '@/utils/font-loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,6 +21,7 @@ export default function Contact() {
       </Head>
 
       <div className={styles.aboutContent}>
+        <h1 className={`pageHeader ${rofane.className}`}>Get in touch</h1>
         <section className={styles.section}>
           <div className={styles.imageWrapperMain}>
             <Image
@@ -41,7 +43,7 @@ export default function Contact() {
             />
           </div>
           <div className={styles.sectionContent}>
-            <h2>Why work with me?</h2>
+            <h2 className={rofane.className}>Why work with me?</h2>
             <p className={styles.copy}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quis? Illo sint ipsam
               adipisci error, autem, quos cum placeat modi impedit totam voluptas unde qui mollitia
