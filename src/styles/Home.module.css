@@ -1,12 +1,12 @@
 .hero {
   width: 100%;
   color: #333;
-  height: auto;
+  height: 64vw; /* This height is set to match the ratio of the background image used, can be removed if different image method is selected */
   grid-column: 1 / -1;
-  background-image: url('https://picsum.photos/1500/700');
+  background-image: url('/img/home_hero.jpg');
+  background-size: cover;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  min-height: 700px;
   align-items: center;
   justify-items: center;
 }
@@ -22,7 +22,7 @@
 .homeContent {
   padding: 3rem;
   display: grid;
-  gap: 2rem;
+  gap: 3.5rem;
   grid-template-columns: 1fr;
   grid-column: 1 / -1;
   max-width: 1300px;
@@ -31,17 +31,18 @@
 
 .section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 3.5rem;
   align-items: center;
 }
 
 .section:nth-child(even) {
   grid-template-areas: 'image copy copy';
+  grid-template-columns: auto 1fr 1fr;
 }
 
 .section:nth-child(odd) {
   grid-template-areas: 'copy copy image';
+  grid-template-columns: 1fr 1fr auto;
   justify-items: right;
 }
 
@@ -66,16 +67,21 @@
   border-top: 1px solid #333;
 }
 
+@media screen and (min-width: 1025px) {
+  .hero {
+    background-image: url('/img/home_hero_xl.jpg');
+  }
+}
+
 @media screen and (max-width: 650px) {
   .hero {
     width: 100%;
     color: #333;
-    height: auto;
+    height: 134vw;
     grid-column: 1 / -1;
-    background-image: url('https://picsum.photos/1500/700');
+    background-image: url('/img/home_hero_mobile.jpg');
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    min-height: 700px;
     align-items: end;
     justify-items: stretch;
   }
@@ -92,7 +98,6 @@
 
   .section {
     display: grid;
-    grid-template-columns: 1fr;
     grid-gap: 2rem;
     align-items: center;
     margin-bottom: 2rem;
@@ -100,6 +105,7 @@
 
   .section:nth-child(odd),
   .section:nth-child(even) {
+    grid-template-columns: 1fr;
     justify-items: center;
     grid-template-areas:
       'image'

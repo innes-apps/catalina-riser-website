@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import homeImgAbout from '../../public/img/home_1.jpg';
+import homeImgOfferings from '../../public/img/home_2.jpg';
 
 import styles from '@/styles/Home.module.css';
 import { rofane } from '@/utils/font-loader';
@@ -29,7 +31,13 @@ export default function Home() {
       <div className={styles.homeContent}>
         <section className={styles.section}>
           <div className={styles.imageWrapper}>
-            <img src="https://picsum.photos/300" />
+            <Image
+              src={homeImgAbout}
+              alt="Katie posing against a railing"
+              width={300}
+              height={462}
+              placeholder="blur"
+            />
           </div>
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>About</h2>
@@ -51,7 +59,13 @@ export default function Home() {
 
         <section className={styles.section}>
           <div className={styles.imageWrapper}>
-            <img src="https://picsum.photos/300" />
+            <Image
+              src={homeImgOfferings}
+              alt="Katie in a yoga pose with mesquite trees in the background"
+              width={300}
+              height={462}
+              placeholder="blur"
+            />
           </div>
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Offerings</h2>

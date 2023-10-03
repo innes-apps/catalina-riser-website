@@ -14,6 +14,18 @@
   justify-items: center;
 }
 
+.imageWrapperMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapperSmall {
+  display: none;
+}
+
 .sectionContent {
   .copy {
     padding: 1rem 0rem;
@@ -40,5 +52,18 @@
     .cta {
       margin: 2rem 0rem;
     }
+  }
+
+  .imageWrapperMain {
+    display: none;
+  }
+
+  .imageWrapperSmall {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 305px;
   }
 }

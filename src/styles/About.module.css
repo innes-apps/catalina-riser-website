@@ -10,18 +10,19 @@
 
 .section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 3.5rem;
   align-items: center;
-  justify-items: center;
 }
 
 .section:nth-child(odd) {
   grid-template-areas: 'image copy copy';
+  grid-template-columns: auto 1fr 1fr;
 }
 
 .section:nth-child(even) {
   grid-template-areas: 'copy copy image';
+  grid-template-columns: 1fr 1fr auto;
+  justify-items: right;
 }
 
 .imageWrapper {
@@ -38,7 +39,6 @@
 @media screen and (max-width: 650px) {
   .section {
     display: grid;
-    grid-template-columns: 1fr;
     grid-gap: 2rem;
     align-items: center;
     margin-bottom: 2rem;
@@ -46,6 +46,7 @@
 
   .section:nth-child(odd),
   .section:nth-child(even) {
+    grid-template-columns: 1fr;
     justify-items: center;
     grid-template-areas:
       'image'
