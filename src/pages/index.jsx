@@ -75,7 +75,7 @@ export default function Home() {
               accessible to everyone and creating a safe space for her students to explore their
               practice.
             </p>
-            <Link href="/about" className="linkAsButton">
+            <Link href="/contact" className="linkAsButton">
               Get in touch <FontAwesomeIcon icon={faAngleRight} size="sm" />
             </Link>
           </div>
