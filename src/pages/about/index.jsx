@@ -23,6 +23,7 @@ export default function About() {
       </Head>
 
       <div className={styles.aboutContent}>
+        <h1 className={`pageHeader ${rofane.className}`}>Hello and Welcome</h1>
         <section className={styles.section}>
           <div className={styles.imageWrapper}>
             <Image
