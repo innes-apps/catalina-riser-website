@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Head>
         <title>Catalina Riser Yoga</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Katie Innes, Tucson AZ based yoga instructor" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
@@ -23,8 +23,8 @@ export default function Home() {
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={`${styles.title} ${rofane.className}`}>Katie Innes</h1>
-          <p className={styles.description}>The sun slowly rises casting light on the mountain,</p>
-          <p className={styles.description}>Bringing with it a sense of peace and calm.</p>
+          <p className={styles.description}>Turn in the direction</p>
+          <p className={styles.description}>of greater mindfulness and love.</p>
         </div>
       </div>
 
@@ -40,16 +40,14 @@ export default function Home() {
             />
           </div>
           <div className={styles.sectionContent}>
-            <h2 className={rofane.className}>About</h2>
+            <h2 className={rofane.className}>Hi I&apos;m Katie!</h2>
             <p className={styles.copy}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quis? Illo sint ipsam
-              adipisci error, autem, quos cum placeat modi impedit totam voluptas unde qui mollitia
-              deleniti? Amet, reprehenderit molestias. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Non, quis? Illo sint ipsam adipisci error, autem, quos cum placeat
-              modi impedit totam voluptas unde qui mollitia deleniti? Amet, reprehenderit molestias.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quis? Illo sint ipsam
-              adipisci error, autem, quos cum placeat modi impedit totam voluptas unde qui mollitia
-              deleniti? Amet, reprehenderit molestias.
+              I am a 200-RYT certified yoga instructor, with experience teaching in Hatha, Vinyasa,
+              and Nidra styles. With over a decade of in-studio yoga practice, my passion lies in
+              expanding yoga and mindfulness to all age levels, including children, with a strong
+              focus on pose safety, body positivity, and inclusivity. My goal is to foster a safe
+              and inclusive space where individuals can deepen their yoga practice and allow the
+              transformative benefits of yoga to enrich their daily lives.
             </p>
             <Link href="/about" className="linkAsButton">
               Learn more <FontAwesomeIcon icon={faAngleRight} size="sm" />
@@ -70,10 +68,16 @@ export default function Home() {
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Offerings</h2>
             <p className={styles.copy}>
-              Katie offers a variety of classes including vinyasa, hatha, yin, and restorative. She
-              also offers private sessions and workshops. She is passionate about making yoga
-              accessible to everyone and creating a safe space for her students to explore their
-              practice.
+              I currently facilitate weekly outdoor classes for beginners and experienced yogis,
+              prioritizing pose safety and accessibility for all levels. I strive to create dynamic
+              sequences that engage and challenge clients within their skillsets. Follow me on
+              Instagram for announcements and updates regarding these classes.
+            </p>
+            <p className={styles.copy}>
+              I am available to teach private Hatha, Vinyasa, or Nidra classes to adults and
+              children in one-on-one or group settings. I am also available for colaborations, and
+              corporate events. Or I would be happy to work with you to create a custom class to
+              suit your needs. Please get in touch for more information!
             </p>
             <Link href="/contact" className="linkAsButton">
               Get in touch <FontAwesomeIcon icon={faAngleRight} size="sm" />
