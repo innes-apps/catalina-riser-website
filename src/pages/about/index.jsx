@@ -89,8 +89,8 @@ export default function About() {
           </div>
           <div className={styles.sectionContent}>
             <p className={styles.copy}>
-              One of my dreams is to develop a yoga class that sparks the interest of the next
-              generation, encouraging them to make yoga a daily part of their lives. I firmly
+              I hope to develop yoga classes that spark the interest of new and potential
+              practitioners, encouraging them to make yoga a daily part of their lives. I firmly
               believe that yoga has the potential to empower individuals of all ages to lead
               healthier, more mindful lives. My offerings encompass a holistic approach to yoga,
               where every breath, every movement, and every moment on the mat contribute to personal

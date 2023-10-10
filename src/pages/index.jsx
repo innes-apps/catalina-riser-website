@@ -70,12 +70,12 @@ export default function Home() {
             <p className={styles.copy}>
               I currently facilitate weekly outdoor classes for beginners and experienced yogis,
               prioritizing pose safety and accessibility for all levels. I strive to create dynamic
-              sequences that engage and challenge clients within their skillsets. Follow me on
+              sequences that engage and challenge clients within their skill sets. Follow me on
               Instagram for announcements and updates regarding these classes.
             </p>
             <p className={styles.copy}>
               I am available to teach private Hatha, Vinyasa, or Nidra classes to adults and
-              children in one-on-one or group settings. I am also available for colaborations, and
+              children in one-on-one or group settings. I am also available for collaborations, and
               corporate events. Or I would be happy to work with you to create a custom class to
               suit your needs. Please get in touch for more information!
             </p>
