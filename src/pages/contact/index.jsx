@@ -47,10 +47,10 @@ export default function Contact() {
             <p className={styles.copy}>
               My philosophy is deeply rooted in inclusivity, body positivity, and mindfulness,
               ensuring that yoga is accessible to everyone, including children, while prioritizing
-              safety and personal well-being. I go beyond physical postures to incorporate pranayama
-              and mindfulness practices, helping you not only develop physical strength but also
-              enhance your mental and emotional awareness. This holistic approach fosters a sense of
-              self that extends far beyond the mat.
+              safety and personal well-being. I go beyond physical postures to incorporate
+              mindfulness practices, helping you not only develop physical strength but also enhance
+              your mental and emotional awareness. This holistic approach fosters a sense of self
+              that extends far beyond the mat.
             </p>
             <p className={styles.copy}>
               I firmly believe in yoga&apos;s potential to empower people of all ages to lead
