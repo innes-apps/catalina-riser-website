@@ -36,14 +36,18 @@ export default function About() {
             />
           </div>
           <div className={styles.sectionContent}>
-            <h2 className={rofane.className}>Personal Story pt. 1</h2>
+            <h2 className={rofane.className}>My Journey</h2>
             <p className={styles.copy}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio fuga
-              ratione laboriosam consectetur inventore, ipsum nulla repudiandae aut expedita nam.
-              Omnis totam nam ex mollitia alias ratione asperiores aliquid. Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit. Nihil, distinctio fuga ratione laboriosam
-              consectetur inventore, ipsum nulla repudiandae aut expedita nam. Omnis totam nam ex
-              mollitia alias ratione asperiores aliquid.
+              My journey with yoga began in 2003 in high school. Since that first encounter, it has
+              become a foundation and passion; but my yoga journey extends beyond the mat. Over the
+              years I felt a strong calling to share the transformative power of yoga with others
+              so, in 2022 I began pursuing my 200-RYT certificate. While working towards its
+              completion, I started offering classes in a local park where I&apos;ve had the
+              privilege of teaching a diverse group of individuals, including military veterans,
+              from diverse backgrounds and skill levels. This experience reinforced my belief in the
+              inclusivity of yoga. My mission is to provide a safe space where all beings can
+              explore and expand their yoga practice, allowing the profound benefits of yoga to
+              ripple into their everyday lives.
             </p>
           </div>
         </section>
@@ -59,19 +63,16 @@ export default function About() {
             />
           </div>
           <div className={styles.sectionContent}>
-            <h2 className={rofane.className}>Personal Story pt. 2</h2>
+            <h2 className={rofane.className}>My Philosophy</h2>
             <p className={styles.copy}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde qui hic facere vero
-              voluptatum quo, eius expedita cumque incidunt, molestias suscipit obcaecati.
-              Praesentium, veritatis ipsum odio nobis cumque sunt deserunt voluptatum, quidem,
-              voluptatibus quod quibusd am quos. Quisquam, quod. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Unde qui hic facere vero voluptatum quo, eius expedita
-              cumque incidunt, molestias suscipit obcaecati. Praesentium, veritatis ipsum odio nobis
-              cumque sunt deserunt voluptatum, quidem, voluptatibus quod quibusd am quos. Quisquam,
-              quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde qui hic facere
-              vero voluptatum quo, eius expedita cumque incidunt, molestias suscipit obcaecati.
-              Praesentium, veritatis ipsum odio nobis cumque sunt deserunt voluptatum, quidem,
-              voluptatibus quod quibusd am quos. Quisquam, quod.
+              My yoga philosophy is rooted in inclusivity, body positivity, and mindfulness.
+              I&apos;m deeply committed to making yoga accessible to people of all age groups,
+              including children, and providing guidance to safely move through each pose in a way
+              that makes sense for their body. As a yoga instructor, I believe in going beyond the
+              physical asanas, incorporating pranayama (breathwork) and mindfulness practices to
+              nurture not only physical strength but also mental and emotional well-being. I believe
+              that these elements, when applied consistently, lead to heightened body and mind
+              awareness, fostering a holistic sense of self.
             </p>
           </div>
         </section>
@@ -87,11 +88,15 @@ export default function About() {
             />
           </div>
           <div className={styles.sectionContent}>
-            <h2 className={rofane.className}>Philosophy and Offerings</h2>
             <p className={styles.copy}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquam? Distinctio
-              nesciunt consequatur sapiente inventore aliquam accusamus, exercitationem, iure veniam
-              facilis illo sequi ipsa obcaecati officia itaque placeat aliquid repellendus.
+              I hope to develop yoga classes that spark the interest of new and potential
+              practitioners, encouraging them to make yoga a daily part of their lives. I firmly
+              believe that yoga has the potential to empower individuals of all ages to lead
+              healthier, more mindful lives. My offerings encompass a holistic approach to yoga,
+              where every breath, every movement, and every moment on the mat contribute to personal
+              growth and self-discovery. It is my privilege and passion to guide students on this
+              transformative journey, nurturing their physical and mental strength while fostering
+              mindfulness that extends far beyond the mat.
             </p>
             <Link href="/contact" className="linkAsButton">
               Get in touch <FontAwesomeIcon icon={faAngleRight} size="sm" />
