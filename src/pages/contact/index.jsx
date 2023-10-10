@@ -60,7 +60,7 @@ export default function Contact() {
               to suit your individual or group needs. I will strive to provide a transformative
               journey that nurtures your physical and mental strength while leaving a lasting impact
               on your overall well-being. Stay connected with me on Instagram for updates and class
-              announcements.
+              announcements or leave me a message if you&apos;d like to work together!
             </p>
           </div>
         </section>
