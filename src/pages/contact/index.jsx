@@ -45,14 +45,22 @@ export default function Contact() {
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Why work with me?</h2>
             <p className={styles.copy}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quis? Illo sint ipsam
-              adipisci error, autem, quos cum placeat modi impedit totam voluptas unde qui mollitia
-              deleniti? Amet, reprehenderit molestias. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Non, quis? Illo sint ipsam adipisci error, autem, quos cum placeat
-              modi impedit totam voluptas unde qui mollitia deleniti? Amet, reprehenderit molestias.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quis? Illo sint ipsam
-              adipisci error, autem, quos cum placeat modi impedit totam voluptas unde qui mollitia
-              deleniti? Amet, reprehenderit molestias.
+              My philosophy is deeply rooted in inclusivity, body positivity, and mindfulness,
+              ensuring that yoga is accessible to everyone, including children, while prioritizing
+              safety and personal well-being. I go beyond physical postures to incorporate pranayama
+              and mindfulness practices, helping you not only develop physical strength but also
+              enhance your mental and emotional awareness. This holistic approach fosters a sense of
+              self that extends far beyond the mat.
+            </p>
+            <p className={styles.copy}>
+              I firmly believe in yoga&apos;s potential to empower people of all ages to lead
+              healthier and more mindful lives. Whether you join my group classes or opt for private
+              sessions, I craft dynamic sequences that engage and challenge you within your
+              abilities. I offer flexibility in my teaching, including the option for custom classes
+              to suit your individual or group needs. I will strive to provide a transformative
+              journey that nurtures your physical and mental strength while leaving a lasting impact
+              on your overall well-being. Stay connected with me on Instagram for updates and class
+              announcements.
             </p>
           </div>
         </section>
