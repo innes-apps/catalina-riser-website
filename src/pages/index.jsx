@@ -87,7 +87,11 @@ export default function Home() {
 
         <section className={styles.socialMedia}>
           <p>Follow Me!</p>
-          <Link href="https://www.instagram.com/catalinariser/" className="linkAsButton">
+          <Link
+            href="https://www.instagram.com/catalinariser/"
+            className="linkAsButton"
+            target="_blank"
+          >
             @catalinariseryoga <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
           </Link>
         </section>

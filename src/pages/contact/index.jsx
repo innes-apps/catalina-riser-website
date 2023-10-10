@@ -59,7 +59,11 @@ export default function Contact() {
         <section className={styles.ctaSection}>
           <div className={styles.cta}>
             <p className={styles.copy}>Follow me for the latest announcements!</p>
-            <Link href="https://www.instagram.com/catalinariser/" className="linkAsButton">
+            <Link
+              href="https://www.instagram.com/catalinariser/"
+              className="linkAsButton"
+              target="_blank"
+            >
               @catalinariseryoga <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
             </Link>
           </div>
@@ -68,8 +72,9 @@ export default function Contact() {
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLScTVfIdHLEsVNTfGQkUvQTDQmtNtzcMgMAj4qxMlSFZAeabHw/viewform?usp=sf_link"
               className="linkAsButton"
+              target="_blank"
             >
-              Get in touch! <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
+              Leave me a message! <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
             </Link>
           </div>
         </section>
