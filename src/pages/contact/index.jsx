@@ -78,7 +78,7 @@ export default function Contact() {
           <div className={styles.cta}>
             <p className={styles.copy}>Interested in working together?</p>
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLScTVfIdHLEsVNTfGQkUvQTDQmtNtzcMgMAj4qxMlSFZAeabHw/viewform?usp=sf_link"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf0SoWO-ulX3OgWTo1bkS1z0h2LvUjx6Sh4dL9uQk7_OFTGqQ/viewform?usp=sf_link"
               className="linkAsButton"
               target="_blank"
             >
