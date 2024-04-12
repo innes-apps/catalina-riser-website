@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import homeImgAbout from '../../public/img/home_1.jpg';
 import homeImgOfferings from '../../public/img/home_2.jpg';
+import ClassSchedule from '@/components/classSchedule/ClassSchedule';
 
 import styles from '@/styles/Home.module.css';
 import { rofane } from '@/utils/font-loader';
@@ -83,6 +84,10 @@ export default function Home() {
               Get in touch <FontAwesomeIcon icon={faAngleRight} size="sm" />
             </Link>
           </div>
+        </section>
+
+        <section className={styles.section}>
+          <ClassSchedule scheduleData={schedule} />
         </section>
 
         <section className={styles.socialMedia}>

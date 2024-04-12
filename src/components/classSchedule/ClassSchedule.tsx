@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { rofane } from '@/utils/font-loader';
 
-import styles from '@/styles/Schedule.module.css';
+import styles from './ClassSchedule.module.css';
 
-export default function Schedule(props) {
+export default function ClassSchedule(scheduleData) {
   return (
     <>
       <Head>
