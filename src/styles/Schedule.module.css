@@ -9,10 +9,32 @@
 }
 
 .scheduleContainer {
+  border-collapse: collapse;
 }
 
-.scheduleRow {
+.scheduleDayCell {
+  border-right: 1px solid var(--color-slate-gray);
+  border-bottom: 1px solid var(--color-slate-gray);
+  padding: 0.5rem;
+}
+.classListCell {
+  border-bottom: 1px solid var(--color-slate-gray);
+  padding: 0.5rem;
 }
 
-.scheduleDayGrid {
+.scheduleDay {
+  font-weight: bold;
+}
+
+.classList {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.classListItem {
+  padding: 0.5rem;
+}
+
+.classListItem:not(:first-child) {
+  border-top: 1px solid var(--color-bud);
 }

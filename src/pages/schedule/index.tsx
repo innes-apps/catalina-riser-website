@@ -4,7 +4,7 @@ import { rofane } from '@/utils/font-loader';
 
 import styles from '@/styles/Schedule.module.css';
 
-export default function Schedule() {
+export default function Schedule(props) {
   return (
     <>
       <Head>
@@ -16,99 +16,129 @@ export default function Schedule() {
 
       <div className={styles.scheduleContent}>
         <h1 className={`pageHeader ${rofane.className}`}>Class Schedule</h1>
-        <div className={styles.scheduleContainer}>
-          <div className={styles.scheduleRow}>
-            <div className={styles.scheduleDayGrid}>
-              <div>
-                <span>Monday</span>
-              </div>
-              <ul>
-                <li>
-                  <p>Slow Flow 10:00 AM</p>
-                  <p>Studio A</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.scheduleRow}>
-            <div className={styles.scheduleDayGrid}>
-              <div>
-                <span>Tuesday</span>
-              </div>
-              <ul>
-                <li>
-                  <p>Slow Flow 10:00 AM</p>
-                  <p>Studio A</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.scheduleRow}>
-            <div className={styles.scheduleDayGrid}>
-              <div>
-                <span>Wednesday</span>
-              </div>
-              <ul>
-                <li>
-                  <p>Slow Flow 10:00 AM</p>
-                  <p>Studio A</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.scheduleRow}>
-            <div className={styles.scheduleDayGrid}>
-              <div>
-                <span>Thursday</span>
-              </div>
-              <ul>
-                <li>
-                  <p>Slow Flow 10:00 AM</p>
-                  <p>Studio A</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.scheduleRow}>
-            <div className={styles.scheduleDayGrid}>
-              <div>
-                <span>Friday</span>
-              </div>
-              <ul>
-                <li>
-                  <p>Slow Flow 10:00 AM</p>
-                  <p>Studio A</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.scheduleRow}>
-            <div className={styles.scheduleDayGrid}>
-              <div>
-                <span>Saturday</span>
-              </div>
-              <ul>
-                <li>
-                  <p>Slow Flow 10:00 AM</p>
-                  <p>Studio A</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.scheduleRow}>
-            <div className={styles.scheduleDayGrid}>
-              <div>
-                <span>Sunday</span>
-              </div>
-              <ul>
-                <li>
-                  <p>Slow Flow 10:00 AM</p>
-                  <p>Studio A</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+        <table className={styles.scheduleContainer}>
+          <tbody>
+            <tr>
+              <td className={styles.scheduleDayCell}>
+                <span className={styles.scheduleDay}>Monday</span>
+              </td>
+              <td className={styles.classListCell}>
+                <ul className={styles.classList}>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.scheduleDayCell}>
+                <span className={styles.scheduleDay}>Tuesday</span>
+              </td>
+              <td className={styles.classListCell}>
+                <ul className={styles.classList}>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.scheduleDayCell}>
+                <span className={styles.scheduleDay}>Wednesday</span>
+              </td>
+              <td className={styles.classListCell}>
+                <ul className={styles.classList}>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.scheduleDayCell}>
+                <span className={styles.scheduleDay}>Thursday</span>
+              </td>
+              <td className={styles.classListCell}>
+                <ul className={styles.classList}>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>
+                      Studio A <span> - $10 drop in</span>
+                    </p>
+                  </li>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.scheduleDayCell}>
+                <span className={styles.scheduleDay}>Friday</span>
+              </td>
+              <td className={styles.classListCell}>
+                <ul className={styles.classList}>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.scheduleDayCell}>
+                <span className={styles.scheduleDay}>Saturday</span>
+              </td>
+              <td className={styles.classListCell}>
+                <ul className={styles.classList}>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.scheduleDayCell}>
+                <span className={styles.scheduleDay}>Sunday</span>
+              </td>
+              <td className={styles.classListCell}>
+                <ul className={styles.classList}>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                  </li>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>Studio A</p>
+                    <p>Contact me for sign up details</p>
+                  </li>
+                  <li className={styles.classListItem}>
+                    <p>Slow Flow 10:00 AM</p>
+                    <p>
+                      Studio A <span> - Contact me for sign up details</span>
+                    </p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </>
   );
