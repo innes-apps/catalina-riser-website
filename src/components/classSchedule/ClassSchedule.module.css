@@ -17,3 +17,12 @@
   border-bottom: 1px solid var(--color-slate-gray);
   padding: 0.5rem;
 }
+
+.classListCell {
+  border-bottom: 1px solid var(--color-slate-gray);
+  padding: 0.5rem;
+}
+
+.scheduleDay {
+  font-weight: bold;
+}
