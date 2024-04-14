@@ -8,7 +8,7 @@ export default function ClassSchedule({ scheduleData }) {
   return (
     <>
       <div className={styles.scheduleContent}>
-        <h1 className={`pageHeader ${rofane.className}`}>Class Schedule</h1>
+        <h2 className={`${rofane.className}`}>Class Schedule</h2>
         <table className={styles.scheduleContainer}>
           <tbody>
             <tr>

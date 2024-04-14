@@ -8,6 +8,10 @@
   margin: 0 auto;
 }
 
+.scheduleContent h2 {
+  text-align: center;
+}
+
 .scheduleContainer {
   border-collapse: collapse;
 }
