@@ -2,8 +2,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import * as Sentry from '@sentry/nextjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { client } from '@/utils/sanity/client';
 import homeImgAbout from '../../public/img/home_1.jpg';
 import homeImgOfferings from '../../public/img/home_2.jpg';
 import ClassSchedule from '@/components/classSchedule/ClassSchedule';
@@ -11,7 +13,7 @@ import ClassSchedule from '@/components/classSchedule/ClassSchedule';
 import styles from '@/styles/Home.module.css';
 import { rofane } from '@/utils/font-loader';
 
-export default function Home() {
+export default function Home({ schedule }) {
   return (
     <>
       <Head>
@@ -86,9 +88,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.section}>
-          <ClassSchedule scheduleData={schedule} />
-        </section>
+        {schedule && (
+          <section className={styles.section}>
+            <ClassSchedule scheduleData={schedule} />
+          </section>
+        )}
 
         <section className={styles.socialMedia}>
           <p>Follow Me!</p>
@@ -103,4 +107,57 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+const convertTo24HourFormat = (timeString) => {
+  const [time, timeModifier] = timeString.split(' ');
+  let [hours, minutes] = time.split(':');
+
+  if (hours === '12') {
+    hours = '00';
+  }
+
+  if (timeModifier.toLowerCase() === 'pm') {
+    // Add 12 hours if PM
+    return `${parseInt(hours) + 12}:${minutes}`;
+  } else if (hours.length === 1) {
+    // Add leading zero if single digit in AM time
+    return `0${hours}:${minutes}`;
+  } else {
+    return `${hours}:${minutes}`;
+  }
+};
+
+export async function getStaticProps() {
+  try {
+    const query = `*[_type == "classes"]{_id, title, day, time, location, note, signUpLink}`;
+    const rawSchedule = await client.fetch(query);
+
+    // Convert rawSchedule into an object with items grouped by day and sorted by time
+    const schedule = rawSchedule
+      .map((item) => ({ ...item, timeAs24Hr: convertTo24HourFormat(item.time) }))
+      .sort(
+        (a, b) =>
+          new Date(`2099-01-01 ${a.timeAs24Hr}:00Z`) - new Date(`2099-01-01 ${b.timeAs24Hr}:00Z`)
+      ) // We only need to sort by time, but we are casting it into a date object to make sure the sorting is correct without having to double sort by hour then minutes
+      .reduce((accumulator, item) => {
+        // Group items by day, set to lowercase for normal looking json key
+        const day = item.day.toLowerCase();
+
+        // If they day array doesn't exist, create it
+        if (!accumulator[day]) {
+          accumulator[day] = [];
+        }
+        // Add the item to the day array
+        accumulator[day].push(item);
+        return accumulator;
+      }, {});
+
+    console.log('schedule', JSON.stringify(schedule, null, 2));
+
+    return { props: { schedule }, revalidate: 60 };
+  } catch (error) {
+    Sentry.captureException(error);
+    return { props: {} };
+  }
 }
