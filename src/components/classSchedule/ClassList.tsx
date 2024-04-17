@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faLocationDot, faComment } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './ClassList.module.css';
 
@@ -25,15 +25,21 @@ const ClassList: React.FC<ClassListProps> = ({ classes }) => {
         {classes.map((item) => (
           <li key={item._id} className={styles.classListItem}>
             <p>
-              {item.title} {item.time}
+              {item.title} - {item.time}
             </p>
-            <p>{item.location}</p>
+            <p>
+              <FontAwesomeIcon icon={faLocationDot} size="sm" /> {item.location}
+            </p>
             {item.signUpLink && (
               <Link href={item.signUpLink} target="_blank" rel="noopener noreferrer">
-                Sign Up <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
+                <FontAwesomeIcon icon={faLink} size="sm" /> Sign Up
               </Link>
             )}
-            {item.note && <p>{item.note}</p>}
+            {item.note && (
+              <p>
+                <FontAwesomeIcon icon={faComment} size="sm" /> {item.note}
+              </p>
+            )}
           </li>
         ))}
       </ul>
