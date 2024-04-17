@@ -1,0 +1,12 @@
+.classList {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.classListItem {
+  padding: 0.5rem;
+}
+
+.classListItem:not(:first-child) {
+  border-top: 1px solid var(--color-bud);
+}

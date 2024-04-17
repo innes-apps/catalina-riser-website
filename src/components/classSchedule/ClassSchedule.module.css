@@ -1,0 +1,32 @@
+.scheduleContent {
+  padding: 0.5rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-column: 1 / -1;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.scheduleContent h2 {
+  text-align: center;
+}
+
+.scheduleContainer {
+  border-collapse: collapse;
+}
+
+.scheduleDayCell {
+  border-right: 1px solid var(--color-slate-gray);
+  border-bottom: 1px solid var(--color-slate-gray);
+  padding: 0.5rem;
+}
+
+.classListCell {
+  border-bottom: 1px solid var(--color-slate-gray);
+  padding: 0.5rem;
+}
+
+.scheduleDay {
+  font-weight: bold;
+}
