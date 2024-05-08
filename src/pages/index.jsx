@@ -9,6 +9,7 @@ import { client } from '@/utils/sanity/client';
 import homeImgAbout from '../../public/img/home_1.jpg';
 import homeImgOfferings from '../../public/img/home_2.jpg';
 import ClassSchedule from '@/components/classSchedule/ClassSchedule';
+import EventCard from '@/components/specialEvents/EventCard';
 
 import styles from '@/styles/Home.module.css';
 import { rofane } from '@/utils/font-loader';
@@ -88,6 +89,13 @@ export default function Home({ schedule }) {
           </div>
         </section>
 
+        <section className={styles.eventSection}>
+          <h2 className={`${rofane.className}`}>Upcomming Events</h2>
+          <div className={styles.eventSectionContent}>
+            <EventCard />
+          </div>
+        </section>
+
         {schedule && (
           <section className={styles.section}>
             <ClassSchedule scheduleData={schedule} />
@@ -130,8 +138,14 @@ const convertTo24HourFormat = (timeString) => {
 
 export async function getStaticProps() {
   try {
-    const query = `*[_type == "classes"]{_id, title, day, time, location, note, signUpLink}`;
-    const rawSchedule = await client.fetch(query);
+    // Get all classes
+    const scheduleQuery = `*[_type == "classes"]{_id, title, day, time, location, note, signUpLink}`;
+    const rawSchedule = await client.fetch(scheduleQuery);
+
+    // Get all events
+    // ToDo: get dynamic events working
+    /* const eventQuery = `*[_type == "events"]{_id, title, date, time, location, signUpLink}`;
+    const events = await client.fetch(eventQuery); */
 
     // Convert rawSchedule into an object with items grouped by day and sorted by time
     const schedule = rawSchedule
@@ -152,8 +166,6 @@ export async function getStaticProps() {
         accumulator[day].push(item);
         return accumulator;
       }, {});
-
-    console.log('schedule', JSON.stringify(schedule, null, 2));
 
     return { props: { schedule }, revalidate: 60 };
   } catch (error) {
