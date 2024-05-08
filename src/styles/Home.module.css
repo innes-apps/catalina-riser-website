@@ -46,6 +46,27 @@
   justify-items: right;
 }
 
+.eventSection {
+  padding: 0.5rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-column: 1 / -1;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.eventSection h2 {
+  text-align: center;
+}
+
+.eventSectionContent {
+  display: grid;
+  grid-gap: 3.5rem;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .imageWrapper {
   grid-area: image;
 }
@@ -114,5 +135,12 @@
     grid-template-areas:
       'image'
       'copy';
+  }
+
+  .eventSection {
+    display: grid;
+    grid-gap: 3.5rem;
+    align-items: center;
+    grid-template-columns: 1fr;
   }
 }
