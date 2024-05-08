@@ -14,7 +14,7 @@ import EventCard from '@/components/specialEvents/EventCard';
 import styles from '@/styles/Home.module.css';
 import { rofane } from '@/utils/font-loader';
 
-export default function Home({ schedule }) {
+export default function Home({ schedule, events }) {
   return (
     <>
       <Head>
@@ -92,7 +92,16 @@ export default function Home({ schedule }) {
         <section className={styles.eventSection}>
           <h2 className={`${rofane.className}`}>Upcomming Events</h2>
           <div className={styles.eventSectionContent}>
-            <EventCard />
+            {events.map((event) => (
+              <EventCard
+                key={event._id}
+                title={event.title}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+                signUpLink={event.signUpLink}
+              />
+            ))}
           </div>
         </section>
 
@@ -142,10 +151,9 @@ export async function getStaticProps() {
     const scheduleQuery = `*[_type == "classes"]{_id, title, day, time, location, note, signUpLink}`;
     const rawSchedule = await client.fetch(scheduleQuery);
 
-    // Get all events
-    // ToDo: get dynamic events working
-    /* const eventQuery = `*[_type == "events"]{_id, title, date, time, location, signUpLink}`;
-    const events = await client.fetch(eventQuery); */
+    // Get all events sorted by date
+    const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, date, time, location, signUpLink }`;
+    const events = await client.fetch(eventQuery);
 
     // Convert rawSchedule into an object with items grouped by day and sorted by time
     const schedule = rawSchedule
@@ -167,7 +175,7 @@ export async function getStaticProps() {
         return accumulator;
       }, {});
 
-    return { props: { schedule }, revalidate: 60 };
+    return { props: { schedule, events }, revalidate: 60 };
   } catch (error) {
     Sentry.captureException(error);
     return { props: {} };

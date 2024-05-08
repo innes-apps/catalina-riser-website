@@ -38,25 +38,42 @@ import styles from './EventCard.module.css';
 } */
 
 // Temporary static event card until get dynamic events working
-export default function EventCard() {
+export default function EventCard(props: {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  signUpLink: string;
+}) {
+  const date = new Date(props.date);
+  /**
+   * Because this date does not contain time information,
+   * it is parsed as midnight UTC.
+   * This means that we need to explicitly pull the UTC date parts
+   * or they might be off by one day due to timezone differences between UTC and the user's local timezone.
+   */
+
   return (
     <div className={styles.eventCard}>
-      <h3>Peace in the Pines - Yoga Practice</h3>
+      <h3>{props.title}</h3>
       <div className={styles.eventCardContent}>
         <div className={styles.eventInfo}>
           <h4>Date</h4>
-          <p>June 1, 2024</p>
+          <p>
+            {/* See above for explaination of why we use UTC */}
+            {date.getUTCMonth() + 1}/{date.getUTCDate()}/{date.getUTCFullYear()}
+          </p>
         </div>
         <div className={styles.eventInfo}>
           <h4>Time</h4>
-          <p>1:00 PM - 4:00 PM</p>
+          <p>{props.time}</p>
         </div>
         <div className={styles.eventInfo}>
           <h4>Location</h4>
-          <p>Middle Bear Picnic Area, Mount Lemmon</p>
+          <p>{props.location}</p>
         </div>
         <Link
-          href="https://www.eventbrite.com/e/peace-in-the-pines-yoga-among-the-pines-on-mount-lemmon-tickets-899116330147"
+          href={props.signUpLink}
           target="_blank"
           rel="noopener noreferrer"
           className="linkAsButton"
