@@ -1,0 +1,15 @@
+.eventContent {
+  padding: 3rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-column: 1 / -1;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
