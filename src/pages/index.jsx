@@ -89,7 +89,7 @@ export default function Home({ schedule, events }) {
           </div>
         </section>
 
-        <section className={styles.eventSection}>
+        <section className={styles.eventSection} id="events">
           <h2 className={`${rofane.className}`}>Upcomming Events</h2>
           <div className={styles.eventSectionContent}>
             {events.map((event) => (
@@ -106,7 +106,7 @@ export default function Home({ schedule, events }) {
         </section>
 
         {schedule && (
-          <section className={styles.section}>
+          <section className={styles.section} id="schedule">
             <ClassSchedule scheduleData={schedule} />
           </section>
         )}
