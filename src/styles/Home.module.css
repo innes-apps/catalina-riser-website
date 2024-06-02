@@ -67,6 +67,11 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.eventsPlaceholder {
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
 .imageWrapper {
   grid-area: image;
 }

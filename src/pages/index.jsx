@@ -91,7 +91,7 @@ export default function Home({ schedule, events }) {
 
         <section className={styles.eventSection} id="events">
           <h2 className={`${rofane.className}`}>Upcomming Events</h2>
-          {events && (
+          {events.length > 0 && (
             <div className={styles.eventSectionContent}>
               {events.map((event) => (
                 <EventCard
@@ -105,7 +105,11 @@ export default function Home({ schedule, events }) {
               ))}
             </div>
           )}
-          {!events && <p>Check back soon!</p>}
+          {events.length === 0 && (
+            <div className={styles.eventSectionContent}>
+              <p className={styles.eventsPlaceholder}>Check back soon!</p>
+            </div>
+          )}
         </section>
 
         {schedule && (
@@ -157,6 +161,8 @@ export async function getStaticProps() {
     // Get all events sorted by date
     const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, date, time, location, signUpLink }`;
     const events = await client.fetch(eventQuery);
+
+    console.log(events);
 
     // Convert rawSchedule into an object with items grouped by day and sorted by time
     const schedule = rawSchedule
