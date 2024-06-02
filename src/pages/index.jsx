@@ -91,18 +91,21 @@ export default function Home({ schedule, events }) {
 
         <section className={styles.eventSection} id="events">
           <h2 className={`${rofane.className}`}>Upcomming Events</h2>
-          <div className={styles.eventSectionContent}>
-            {events.map((event) => (
-              <EventCard
-                key={event._id}
-                title={event.title}
-                date={event.date}
-                time={event.time}
-                location={event.location}
-                signUpLink={event.signUpLink}
-              />
-            ))}
-          </div>
+          {events && (
+            <div className={styles.eventSectionContent}>
+              {events.map((event) => (
+                <EventCard
+                  key={event._id}
+                  title={event.title}
+                  date={event.date}
+                  time={event.time}
+                  location={event.location}
+                  signUpLink={event.signUpLink}
+                />
+              ))}
+            </div>
+          )}
+          {!events && <p>Check back soon!</p>}
         </section>
 
         {schedule && (
