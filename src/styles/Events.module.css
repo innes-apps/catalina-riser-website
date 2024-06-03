@@ -26,6 +26,7 @@
 
 .eventDetails {
   display: grid;
+  max-width: 800px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0.5rem;
   grid-template-areas:
@@ -53,4 +54,30 @@
 .eventSignUpLink {
   width: fit-content;
   grid-area: signUpLink;
+}
+
+@media screen and (max-width: 650px) {
+  .event {
+    width: 95%;
+  }
+  .eventDetails {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'date time'
+      'location location'
+      'description description'
+      'signUpLink signUpLink';
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .eventDetails {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'date'
+      'time'
+      'location'
+      'description'
+      'signUpLink';
+  }
 }
