@@ -1,11 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { rofane } from '@/utils/font-loader';
 import * as Sentry from '@sentry/nextjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { client } from '@/utils/sanity/client';
+import { urlFor } from '@/utils/sanity/image-helper';
 
 import styles from '@/styles/Events.module.css';
 
@@ -25,12 +27,31 @@ export default function Events(props: { events: any[] }) {
         <section className={styles.section}>
           {props.events.map((event) => {
             const date = new Date(event.date);
+            /**
+             * Because this date does not contain time information,
+             * it is parsed as midnight UTC.
+             * This means that we need to explicitly pull the UTC date parts
+             * or they might be off by one day due to timezone differences between UTC and the user's local timezone.
+             */
 
             return (
               <div key={event._id} className={styles.event}>
                 <h3>{event.title}</h3>
-                <div className={styles.eventDetails}>
-                  <div className={`${styles.eventInfo} ${styles.eventDate}`}>
+                <div
+                  className={
+                    event.featureImage ? styles.eventDetailsWithImage : styles.eventDetails
+                  }
+                >
+                  {event.featureImage && (
+                    <Image
+                      className={styles.eventImage}
+                      src={urlFor(event.featureImage).width(200).url()}
+                      alt={event.title}
+                      width={200}
+                      height={200}
+                    />
+                  )}
+                  <div className={`${styles.eventDate}`}>
                     <h4>Date</h4>
                     <p>
                       {/* See above for explaination of why we use UTC */}
@@ -38,17 +59,17 @@ export default function Events(props: { events: any[] }) {
                     </p>
                   </div>
 
-                  <div className={`${styles.eventInfo} ${styles.eventTime}`}>
+                  <div className={`${styles.eventTime}`}>
                     <h4>Time</h4>
                     <p>{event.time}</p>
                   </div>
 
-                  <div className={`${styles.eventInfo} ${styles.eventLocation}`}>
+                  <div className={`${styles.eventLocation}`}>
                     <h4>Location</h4>
                     <p>{event.location}</p>
                   </div>
 
-                  <div className={`${styles.eventInfo} ${styles.eventDescription}`}>
+                  <div className={`${styles.eventDescription}`}>
                     <h4>Description</h4>
                     <p>{event.description}</p>
                   </div>
@@ -74,64 +95,12 @@ export default function Events(props: { events: any[] }) {
 export async function getStaticProps() {
   try {
     // Get all events sorted by date
-    const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, description, date, time, location, signUpLink }`;
+    const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, description, date, time, location, signUpLink, featureImage }`;
     const events = await client.fetch(eventQuery);
 
-    // ToDo replace with real data before deploying
     return {
       props: {
-        events: [
-          {
-            _id: 'event1',
-            title: 'Yoga for Beginners',
-            description:
-              "Discover the gentle art of yoga, a practice that awakens body, mind, and spirit. In this class, you'll learn basic poses and breathing techniques to set the foundation for your yoga journey.",
-            date: '2023-01-01',
-            time: '12:00PM - 3:00PM',
-            location: '123 Main St.',
-            signUpLink: 'https://example.com/signup',
-          },
-          {
-            _id: 'event2',
-            title: 'Strength Yoga',
-            description:
-              "Build your strength and flexibility with this challenging class. You'll be pushed to your limits as you explore dynamic flow sequences that engage your muscles from head to toe.",
-            date: '2023-01-08',
-            time: '6:00PM - 9:00PM',
-            location: '456 Elm St.',
-            signUpLink: 'https://example.com/signup',
-          },
-          {
-            _id: 'event3',
-            title: 'Restorative Yoga',
-            description:
-              'Find peace and relaxation in this deeply nurturing practice. Let go of tension and let your body rejuvenate as you settle into gentle restorative poses that invigorate the spirit and calm the mind.',
-            date: '2023-01-15',
-            time: '10:00AM - 5:00PM',
-            location: '789 Oak St.',
-            signUpLink: 'https://example.com/signup',
-          },
-          {
-            _id: 'event4',
-            title: 'Yoga for Arthritis',
-            description:
-              'A gentle practice designed to alleviate joint pain. This class will guide you through sequences that target specific joints, providing a safe and effective way to reduce stress and tension.',
-            date: '2023-01-22',
-            time: '7:00PM - 9:00PM',
-            location: '321 Maple St.',
-            signUpLink: 'https://example.com/signup',
-          },
-          {
-            _id: 'event5',
-            title: 'Yin Yoga',
-            description:
-              "Experience a deep release of tension and stress with this slow-flowing practice. Through a series of gentle postures and breathing techniques, you'll find your body and mind rejuvenated and relaxed.",
-            date: '2023-01-29',
-            time: '9:00AM - 11:00AM',
-            location: '567 Pine St.',
-            signUpLink: 'https://example.com/signup',
-          },
-        ],
+        events,
       },
       revalidate: 60,
     };

@@ -24,6 +24,37 @@
   margin-bottom: 1rem;
 }
 
+.eventDetailsWithImage {
+  display: grid;
+  max-width: 800px;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    'image date time location'
+    'image description description description'
+    'image signUpLink signUpLink signUpLink';
+
+  & .eventImage {
+    grid-area: image;
+  }
+
+  & .eventDate {
+    grid-area: date;
+  }
+
+  & .eventTime {
+    grid-area: time;
+  }
+
+  & .eventLocation {
+    grid-area: location;
+  }
+
+  & .eventDescription {
+    grid-area: description;
+  }
+}
+
 .eventDetails {
   display: grid;
   max-width: 800px;
