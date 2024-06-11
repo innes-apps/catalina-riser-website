@@ -91,6 +91,7 @@
   .event {
     width: 95%;
   }
+
   .eventDetails {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -99,12 +100,36 @@
       'description description'
       'signUpLink signUpLink';
   }
+
+  .eventDetailsWithImage {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'image image image'
+      'date time location'
+      'description description description'
+      'signUpLink signUpLink signUpLink';
+  }
+
+  .eventImage {
+    margin: 0px auto;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .eventDetails {
     grid-template-columns: 1fr;
     grid-template-areas:
+      'date'
+      'time'
+      'location'
+      'description'
+      'signUpLink';
+  }
+
+  .eventDetailsWithImage {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'image'
       'date'
       'time'
       'location'
