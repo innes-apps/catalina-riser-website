@@ -9,10 +9,6 @@ export default function Header() {
   return (
     <>
       <header className={`${styles.header} ${rofane.className}`}>
-        <nav className={styles.leftNav} aria-label="left of logo nav">
-          <Link href="/about">About</Link>
-        </nav>
-
         <Link href="/">
           <Image
             src={'/img/Logo_Circle_transp.png'}
@@ -24,7 +20,9 @@ export default function Header() {
           />
         </Link>
 
-        <nav className={styles.rightNav} aria-label="right of logo nav">
+        <nav className={styles.mainNav} aria-label="below logo nav">
+          <Link href="/about">About</Link>
+          <Link href="/events">Events</Link>
           <Link href="/contact">Contact</Link>
         </nav>
       </header>
@@ -44,6 +42,7 @@ export default function Header() {
 
         <nav className={styles.mobileNav}>
           <Link href="/about">About</Link>
+          <Link href="/events">Events</Link>
           <Link href="/contact">Contact</Link>
         </nav>
       </header>
