@@ -95,7 +95,7 @@ export default function Events(props: { events: any[] }) {
 export async function getStaticProps() {
   try {
     // Get all events sorted by date
-    const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, description, date, time, location, signUpLink, featureImage }`;
+    const eventQuery = `*[_type == "events"] | order(date asc) { _id, title, description, date, time, location, signUpLink, featureImage }`;
     const events = await client.fetch(eventQuery);
 
     return {
