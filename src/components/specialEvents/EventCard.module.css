@@ -1,5 +1,4 @@
 .eventCard {
-  grid-column: 2 / 3;
   border: 1px solid var(--color-irish-coffee);
   border-radius: 10px;
   padding: 1.5rem;

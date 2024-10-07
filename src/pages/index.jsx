@@ -91,8 +91,14 @@ export default function Home({ schedule, events }) {
 
         <section className={styles.eventSection} id="events">
           <h2 className={`${rofane.className}`}>Upcomming Events</h2>
-          {events.length > 0 && (
+          {events.length === 0 && (
             <div className={styles.eventSectionContent}>
+              <p className={styles.eventsPlaceholder}>Check back soon!</p>
+            </div>
+          )}
+
+          {events.length === 1 && (
+            <div className={styles.eventSectionContent1CardRow}>
               {events.map((event) => (
                 <EventCard
                   key={event._id}
@@ -105,9 +111,34 @@ export default function Home({ schedule, events }) {
               ))}
             </div>
           )}
-          {events.length === 0 && (
-            <div className={styles.eventSectionContent}>
-              <p className={styles.eventsPlaceholder}>Check back soon!</p>
+
+          {events.length === 2 && (
+            <div className={styles.eventSectionContent2CardRow}>
+              {events.map((event) => (
+                <EventCard
+                  key={event._id}
+                  title={event.title}
+                  date={event.date}
+                  time={event.time}
+                  location={event.location}
+                  signUpLink={event.signUpLink}
+                />
+              ))}
+            </div>
+          )}
+
+          {events.length >= 3 && (
+            <div className={styles.eventSectionContent3CardRow}>
+              {events.map((event) => (
+                <EventCard
+                  key={event._id}
+                  title={event.title}
+                  date={event.date}
+                  time={event.time}
+                  location={event.location}
+                  signUpLink={event.signUpLink}
+                />
+              ))}
             </div>
           )}
         </section>
