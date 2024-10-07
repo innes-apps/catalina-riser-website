@@ -25,7 +25,7 @@ export default function Events(props: { events: any[] }) {
         <h1 className={`pageHeader ${rofane.className}`}>Upcoming Events!</h1>
 
         {props.events.length === 0 && (
-          <p className={styles.noEvents}>Check back soon for upcoming events.</p>
+          <p className={styles.noEvents}>Check back soon for new events.</p>
         )}
 
         {props.events.length > 0 && (
