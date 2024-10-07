@@ -91,6 +91,12 @@ export default function Home({ schedule, events }) {
 
         <section className={styles.eventSection} id="events">
           <h2 className={`${rofane.className}`}>Upcomming Events</h2>
+          {events.length === 0 && (
+            <div className={styles.eventSectionContent}>
+              <p className={styles.eventsPlaceholder}>Check back soon!</p>
+            </div>
+          )}
+
           {events.length > 0 && (
             <div className={styles.eventSectionContent}>
               {events.map((event) => (
@@ -103,11 +109,6 @@ export default function Home({ schedule, events }) {
                   signUpLink={event.signUpLink}
                 />
               ))}
-            </div>
-          )}
-          {events.length === 0 && (
-            <div className={styles.eventSectionContent}>
-              <p className={styles.eventsPlaceholder}>Check back soon!</p>
             </div>
           )}
         </section>
