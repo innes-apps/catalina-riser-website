@@ -60,7 +60,21 @@
   text-align: center;
 }
 
-.eventSectionContent {
+.eventSectionContent1CardRow {
+  display: grid;
+  grid-gap: 3.5rem;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.eventSectionContent2CardRow {
+  display: grid;
+  grid-gap: 3.5rem;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.eventSectionContent3CardRow {
   display: grid;
   grid-gap: 3.5rem;
   align-items: center;
