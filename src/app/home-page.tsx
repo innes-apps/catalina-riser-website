@@ -1,11 +1,10 @@
+'use client';
+
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import * as Sentry from '@sentry/nextjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { client } from '@/utils/sanity/client';
 import homeImgAbout from '../../public/img/home_1.jpg';
 import homeImgOfferings from '../../public/img/home_2.jpg';
 import ClassSchedule from '@/components/classSchedule/ClassSchedule';
@@ -14,16 +13,9 @@ import EventCard from '@/components/specialEvents/EventCard';
 import styles from '@/styles/Home.module.css';
 import { rofane } from '@/utils/font-loader';
 
-export default function Home({ schedule, events }) {
+export default function HomePage({ schedule, events }) {
   return (
     <>
-      <Head>
-        <title>Catalina Riser Yoga</title>
-        <meta name="description" content="Katie Innes, Tucson AZ based yoga instructor" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={`${styles.title} ${rofane.className}`}>Katie Innes</h1>
@@ -162,62 +154,4 @@ export default function Home({ schedule, events }) {
       </div>
     </>
   );
-}
-
-const convertTo24HourFormat = (timeString) => {
-  const [time, timeModifier] = timeString.split(' ');
-  let [hours, minutes] = time.split(':');
-
-  if (hours === '12') {
-    hours = '00';
-  }
-
-  if (timeModifier.toLowerCase() === 'pm') {
-    // Add 12 hours if PM
-    return `${parseInt(hours) + 12}:${minutes}`;
-  } else if (hours.length === 1) {
-    // Add leading zero if single digit in AM time
-    return `0${hours}:${minutes}`;
-  } else {
-    return `${hours}:${minutes}`;
-  }
-};
-
-export async function getStaticProps() {
-  try {
-    // Get all classes
-    const scheduleQuery = `*[_type == "classes"]{_id, title, day, time, location, note, signUpLink}`;
-    const rawSchedule = await client.fetch(scheduleQuery);
-
-    // Get all events sorted by date
-    const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, date, time, location, signUpLink }`;
-    const events = await client.fetch(eventQuery);
-
-    console.log(events);
-
-    // Convert rawSchedule into an object with items grouped by day and sorted by time
-    const schedule = rawSchedule
-      .map((item) => ({ ...item, timeAs24Hr: convertTo24HourFormat(item.time) }))
-      .sort(
-        (a, b) =>
-          new Date(`2099-01-01 ${a.timeAs24Hr}:00Z`) - new Date(`2099-01-01 ${b.timeAs24Hr}:00Z`)
-      ) // We only need to sort by time, but we are casting it into a date object to make sure the sorting is correct without having to double sort by hour then minutes
-      .reduce((accumulator, item) => {
-        // Group items by day, set to lowercase for normal looking json key
-        const day = item.day.toLowerCase();
-
-        // If they day array doesn't exist, create it
-        if (!accumulator[day]) {
-          accumulator[day] = [];
-        }
-        // Add the item to the day array
-        accumulator[day].push(item);
-        return accumulator;
-      }, {});
-
-    return { props: { schedule, events }, revalidate: 60 };
-  } catch (error) {
-    Sentry.captureException(error);
-    return { props: {} };
-  }
 }
