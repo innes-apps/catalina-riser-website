@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { rofane } from '@/utils/font-loader';
@@ -11,26 +10,34 @@ import { urlFor } from '@/utils/sanity/image-helper';
 
 import styles from '@/styles/Events.module.css';
 
-export default function Events(props: { events: any[] }) {
+async function getPageData(): Promise<{ events: any[] }> {
+  try {
+    // Get all events sorted by date
+    const eventQuery = `*[_type == "events"] | order(date asc) { _id, title, description, date, time, location, signUpLink, featureImage }`;
+    const events = await client.fetch(eventQuery);
+
+    return {
+      events,
+    };
+  } catch (error) {
+    Sentry.captureException(error);
+    return { events: [] };
+  }
+}
+
+export default async function Events() {
+  const { events } = await getPageData();
+
   return (
     <>
-      <Head>
-        <title>Catalina Riser Yoga</title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <div className={styles.eventContent}>
         <h1 className={`pageHeader ${rofane.className}`}>Upcoming Events!</h1>
 
-        {props.events.length === 0 && (
-          <p className={styles.noEvents}>Check back soon for new events.</p>
-        )}
+        {events.length === 0 && <p className={styles.noEvents}>Check back soon for new events.</p>}
 
-        {props.events.length > 0 && (
+        {events.length > 0 && (
           <section className={styles.section}>
-            {props.events.map((event) => {
+            {events.map((event) => {
               const date = new Date(event.date);
               /**
                * Because this date does not contain time information,
@@ -96,22 +103,4 @@ export default function Events(props: { events: any[] }) {
       </div>
     </>
   );
-}
-
-export async function getStaticProps() {
-  try {
-    // Get all events sorted by date
-    const eventQuery = `*[_type == "events"] | order(date asc) { _id, title, description, date, time, location, signUpLink, featureImage }`;
-    const events = await client.fetch(eventQuery);
-
-    return {
-      props: {
-        events,
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    Sentry.captureException(error);
-    return { props: {} };
-  }
 }
