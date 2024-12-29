@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { rofane } from '@/utils/font-loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
