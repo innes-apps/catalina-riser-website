@@ -1,14 +1,14 @@
-import Head from 'next/head';
+import type { Metadata } from 'next';
 import * as Sentry from '@sentry/nextjs';
+
+export const metadata: Metadata = {
+  title: 'Sentry Onboarding page',
+  description: 'Test Sentry for your Next.js app!',
+};
 
 export default function Page() {
   return (
     <div>
-      <Head>
-        <title>Sentry Onboarding</title>
-        <meta name="description" content="Test Sentry for your Next.js app!" />
-      </Head>
-
       <main
         style={{
           minHeight: '100vh',
