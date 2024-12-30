@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: 'Catalina Riser Yoga',
   description:
     'Katie Innes, offers inclusive Hatha, Vinyasa, and Nidra yoga classes in Tucson, Arizona, focusing on pose safety, body positivity, inclusivity, and mindfulness.',
+  metadataBase: new URL('https://www.catalinariser.yoga/'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export const viewport: Viewport = {
