@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { rofane } from '@/utils/font-loader';
-import * as Sentry from '@sentry/nextjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { client } from '@/utils/sanity/client';
@@ -20,7 +19,7 @@ async function getPageData(): Promise<{ events: any[] }> {
       events,
     };
   } catch (error) {
-    Sentry.captureException(error);
+    console.error('Error getting events:', error.message);
     return { events: [] };
   }
 }

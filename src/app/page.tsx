@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs';
 import { client } from '@/utils/sanity/client';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -71,7 +70,7 @@ async function getPageData(): Promise<{ schedule: Array<any>; events: Array<any>
 
     return { schedule, events };
   } catch (error) {
-    Sentry.captureException(error);
+    console.error('Error fetching data:', error);
     return { schedule: [], events: [] };
   }
 }

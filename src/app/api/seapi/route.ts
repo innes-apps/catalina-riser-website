@@ -1,5 +1,0 @@
-// A faulty API route to test Sentry's error monitoring
-export async function GET(_req: Request, res: Response) {
-  throw new Error('Sentry Example API Route Error');
-  //res.status(200).json({ name: "John Doe" });
-}
