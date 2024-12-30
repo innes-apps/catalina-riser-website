@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import Image from 'next/image';
-import { lato, rofane } from '@/utils/font-loader';
+import { rofane } from '@/utils/font-loader';
 
 import styles from './MainLayout.module.css';
 

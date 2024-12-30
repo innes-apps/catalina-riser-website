@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 import Link from 'next/link';
 import { rofane } from '@/utils/font-loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,13 +11,6 @@ import styles from '@/styles/Contact.module.css';
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Catalina Riser Yoga</title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <div className={styles.aboutContent}>
         <h1 className={`pageHeader ${rofane.className}`}>Get in touch</h1>
         <section className={styles.section}>
