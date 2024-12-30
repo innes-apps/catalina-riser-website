@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { Viewport } from 'next';
 import '@/styles/globals.css';
 import '@/styles/reset.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -11,6 +12,13 @@ export const metadata: Metadata = {
   title: 'Catalina Riser Yoga',
   description:
     'Katie Innes, offers inclusive Hatha, Vinyasa, and Nidra yoga classes in Tucson, Arizona, focusing on pose safety, body positivity, inclusivity, and mindfulness.',
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ccd3d4' },
+    { media: '(prefers-color-scheme: dark)', color: '#86999f' },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
