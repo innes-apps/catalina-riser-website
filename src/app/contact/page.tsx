@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { rofane } from '@/utils/font-loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +8,17 @@ import Image from 'next/image';
 import contactImage1 from '../../../public/img/contact_1.jpg';
 
 import styles from '@/styles/Contact.module.css';
+
+export const metadata: Metadata = {
+  title: 'Catalina Riser Yoga | Contact',
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Catalina Riser Yoga | Contact',
+    images: ['https://www.catalinariser.yoga/img/og_image.png'],
+  },
+};
 
 export default function Contact() {
   return (

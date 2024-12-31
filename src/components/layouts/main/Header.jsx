@@ -21,6 +21,7 @@ export default function Header() {
         </Link>
 
         <nav className={styles.mainNav} aria-label="below logo nav">
+          <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/events">Events</Link>
           <Link href="/contact">Contact</Link>
@@ -41,6 +42,7 @@ export default function Header() {
         </div>
 
         <nav className={styles.mobileNav}>
+          <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/events">Events</Link>
           <Link href="/contact">Contact</Link>

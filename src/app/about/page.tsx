@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { rofane } from '@/utils/font-loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +10,17 @@ import aboutImage2 from '../../../public/img/about_2.jpg';
 import aboutImage3 from '../../../public/img/about_3.jpg';
 
 import styles from '@/styles/About.module.css';
+
+export const metadata: Metadata = {
+  title: 'Catalina Riser Yoga | About',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'Catalina Riser Yoga | About',
+    images: ['https://www.catalinariser.yoga/img/og_image.png'],
+  },
+};
 
 export default function About() {
   return (

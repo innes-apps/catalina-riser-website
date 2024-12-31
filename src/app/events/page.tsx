@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,6 +9,17 @@ import { client } from '@/utils/sanity/client';
 import { urlFor } from '@/utils/sanity/image-helper';
 
 import styles from '@/styles/Events.module.css';
+
+export const metadata: Metadata = {
+  title: 'Catalina Riser Yoga | Events',
+  alternates: {
+    canonical: '/events',
+  },
+  openGraph: {
+    title: 'Catalina Riser Yoga | Events',
+    images: ['https://www.catalinariser.yoga/img/og_image.png'],
+  },
+};
 
 async function getPageData(): Promise<{ events: any[] }> {
   try {
