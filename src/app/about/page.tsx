@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/about',
   },
+  openGraph: {
+    title: 'Catalina Riser Yoga | About',
+    images: ['https://www.catalinariser.yoga/img/og_image.png'],
+  },
 };
 
 export default function About() {

@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/events',
   },
+  openGraph: {
+    title: 'Catalina Riser Yoga | Events',
+    images: ['https://www.catalinariser.yoga/img/og_image.png'],
+  },
 };
 
 async function getPageData(): Promise<{ events: any[] }> {

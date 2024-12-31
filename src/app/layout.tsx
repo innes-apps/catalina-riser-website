@@ -11,10 +11,16 @@ import Layout from '@/components/layouts/main/Layout';
 export const metadata: Metadata = {
   title: 'Catalina Riser Yoga',
   description:
-    'Katie Innes, offers inclusive Hatha, Vinyasa, and Nidra yoga classes in Tucson, Arizona, focusing on pose safety, body positivity, inclusivity, and mindfulness.',
+    'Katie Innes, offers inclusive Hatha, Vinyasa, and Nidra yoga classes in Tucson, Arizona, focusing on pose safety, body positivity, and mindfulness.',
   metadataBase: new URL('https://www.catalinariser.yoga/'),
   alternates: {
     canonical: '/',
+  },
+  openGraph: {
+    title: 'Catalina Riser Yoga',
+    description:
+      'Katie Innes, offers inclusive Hatha, Vinyasa, and Nidra yoga classes in Tucson, Arizona, focusing on pose safety, body positivity, and mindfulness.',
+    images: ['https://www.catalinariser.yoga/img/og_image.png'],
   },
 };
 
