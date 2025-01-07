@@ -22,31 +22,36 @@ export default function EventCard(props: {
 
   return (
     <div className={styles.eventCard}>
-      <h3>{props.title}</h3>
       <div className={styles.eventCardContent}>
-        <div className={styles.eventInfo}>
-          <h4>Date</h4>
-          <p>
-            {/* See above for explaination of why we use UTC */}
-            {date.getUTCMonth() + 1}/{date.getUTCDate()}/{date.getUTCFullYear()}
-          </p>
+        <div>
+          <h3>{props.title}</h3>
+          <div className={styles.eventInfo}>
+            <h4>Date</h4>
+            <p>
+              {/* See above for explaination of why we use UTC */}
+              {date.getUTCMonth() + 1}/{date.getUTCDate()}/{date.getUTCFullYear()}
+            </p>
+          </div>
+          <div className={styles.eventInfo}>
+            <h4>Time</h4>
+            <p>{props.time}</p>
+          </div>
+          <div className={styles.eventInfo}>
+            <h4>Location</h4>
+            <p>{props.location}</p>
+          </div>
         </div>
-        <div className={styles.eventInfo}>
-          <h4>Time</h4>
-          <p>{props.time}</p>
+
+        <div className={styles.ctaWrapper}>
+          <Link
+            href={props.signUpLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="linkAsButton"
+          >
+            <FontAwesomeIcon icon={faLink} size="sm" /> Sign Up!
+          </Link>
         </div>
-        <div className={styles.eventInfo}>
-          <h4>Location</h4>
-          <p>{props.location}</p>
-        </div>
-        <Link
-          href={props.signUpLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="linkAsButton"
-        >
-          <FontAwesomeIcon icon={faLink} size="sm" /> Sign Up!
-        </Link>
       </div>
     </div>
   );

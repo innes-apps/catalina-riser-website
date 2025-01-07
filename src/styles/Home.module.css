@@ -70,14 +70,14 @@
 .eventSectionContent2CardRow {
   display: grid;
   grid-gap: 3.5rem;
-  align-items: center;
+  align-items: stretch;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .eventSectionContent3CardRow {
   display: grid;
   grid-gap: 3.5rem;
-  align-items: center;
+  align-items: stretch;
   grid-template-columns: repeat(3, 1fr);
 }
 
