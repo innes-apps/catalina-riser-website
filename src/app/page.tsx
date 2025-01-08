@@ -51,7 +51,7 @@ async function getPageData(): Promise<{ schedule: Array<any>; events: Array<any>
     );
 
     // Get all events sorted by date
-    const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, date, time, location, signUpLink }`;
+    const eventQuery = `*[_type == "events"] | order(date asc) { _id, title, date, time, location, signUpLink }`;
     const events = await client.fetch(
       eventQuery,
       {},
