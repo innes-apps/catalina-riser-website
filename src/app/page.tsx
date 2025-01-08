@@ -42,11 +42,23 @@ async function getPageData(): Promise<{ schedule: Array<any>; events: Array<any>
   try {
     // Get all classes
     const scheduleQuery = `*[_type == "classes"]{_id, title, day, time, location, note, signUpLink}`;
-    const rawSchedule = await client.fetch(scheduleQuery);
+    const rawSchedule = await client.fetch(
+      scheduleQuery,
+      {},
+      {
+        next: { revalidate: 600 },
+      }
+    );
 
     // Get all events sorted by date
     const eventQuery = `*[_type == "events"] | order(date desc) { _id, title, date, time, location, signUpLink }`;
-    const events = await client.fetch(eventQuery);
+    const events = await client.fetch(
+      eventQuery,
+      {},
+      {
+        next: { revalidate: 600 },
+      }
+    );
 
     // console.log(rawSchedule);
     // console.log(events);
