@@ -15,11 +15,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const homePageStats = fs.statSync('./src/app/page.tsx');
   // Get all classes last updated date
   const scheduleQuery = `*[_type == "classes"]{_updatedAt}`;
-  const rawSchedule = await client.fetch(scheduleQuery);
+  const rawSchedule = await client.fetch(
+    scheduleQuery,
+    {},
+    {
+      next: { revalidate: 60 * 6 },
+    }
+  );
 
   // Get all event's laste updated date
   const eventQuery = `*[_type == "events"]{_updatedAt}`;
-  const events = await client.fetch(eventQuery);
+  const events = await client.fetch(
+    eventQuery,
+    {},
+    {
+      next: { revalidate: 60 * 6 },
+    }
+  );
 
   // Merge the two arrays and extract the _updatedAt field
   const allUpdateDates = [...rawSchedule, ...events].map((item) => item._updatedAt);
