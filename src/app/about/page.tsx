@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import Image from 'next/image';
-import aboutImage1 from '../../../public/img/about_1.jpg';
-import aboutImage2 from '../../../public/img/about_2.jpg';
-import aboutImage3 from '../../../public/img/about_3.jpg';
+import aboutImage1 from '../../../public/img/about_1.webp';
+import aboutImage2 from '../../../public/img/about_2.webp';
+import aboutImage3 from '../../../public/img/about_3.webp';
 
 import styles from '@/styles/About.module.css';
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Catalina Riser Yoga | About',
-    images: ['https://www.catalinariser.yoga/img/og_image.png'],
+    images: ['https://www.catalinariser.yoga/img/og_image.webp'],
   },
 };
 

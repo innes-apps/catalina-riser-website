@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 import Image from 'next/image';
-import contactImage1 from '../../../public/img/contact_1.jpg';
+import contactImage1 from '../../../public/img/contact_1.webp';
 
 import styles from '@/styles/Contact.module.css';
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Catalina Riser Yoga | Contact',
-    images: ['https://www.catalinariser.yoga/img/og_image.png'],
+    images: ['https://www.catalinariser.yoga/img/og_image.webp'],
   },
 };
 

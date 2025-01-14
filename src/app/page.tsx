@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import homeImgAbout from '../../public/img/home_1.jpg';
-import homeImgOfferings from '../../public/img/home_2.jpg';
+import homeImgAbout from '../../public/img/home_1.webp';
+import homeImgOfferings from '../../public/img/home_2.webp';
 import ClassSchedule from '@/components/classSchedule/ClassSchedule';
 import EventCard from '@/components/specialEvents/EventCard';
 

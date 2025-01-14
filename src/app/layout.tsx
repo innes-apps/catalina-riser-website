@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Katie Innes, offers inclusive Hatha, Vinyasa, and Nidra yoga classes in Tucson, Arizona, focusing on pose safety, body positivity, and mindfulness.',
     images: [
       {
-        url: 'https://www.catalinariser.yoga/img/og_image.png',
+        url: 'https://www.catalinariser.yoga/img/og_image.webp',
         alt: 'Logo for Catalina Riser Yoga',
       },
     ],

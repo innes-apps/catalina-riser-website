@@ -11,7 +11,7 @@ export default function Header() {
       <header className={`${styles.header} ${rofane.className}`}>
         <Link href="/">
           <Image
-            src={'/img/Logo_Circle_transp.png'}
+            src={'/img/Logo_Circle_transp.webp'}
             alt="Catalina Riser Yoga Logo"
             width={150}
             height={150}
@@ -31,7 +31,7 @@ export default function Header() {
         <div className={styles.mobileBanner}>
           <Link href="/">
             <Image
-              src={'/img/Logo_Full.png'}
+              src={'/img/Logo_Full.webp'}
               alt="Catalina Riser Yoga Logo"
               width={257}
               height={150}
