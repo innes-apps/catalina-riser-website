@@ -21,12 +21,14 @@
     "eslint-config-next": "13.4.19",
     "next": "^14.2.22",
     "next-sanity": "^9.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/node": "20.12.5",
+    "@types/prop-types": "^15.7.14",
     "@types/react": "18.2.74",
+    "@types/unist": "^3.0.3",
     "eslint-config-prettier": "^9.0.0"
   }
 }
