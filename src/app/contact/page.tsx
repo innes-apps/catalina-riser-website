@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Catalina Riser Yoga | Contact',
+    siteName: 'Catalina Riser Yoga | Contact',
+    url: 'https://www.catalinariser.yoga/contact',
     images: ['https://www.catalinariser.yoga/img/og_image.webp'],
   },
 };

@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Catalina Riser Yoga | Events',
+    siteName: 'Catalina Riser Yoga | Events',
+    url: 'https://www.catalinariser.yoga/events',
     images: ['https://www.catalinariser.yoga/img/og_image.webp'],
   },
 };

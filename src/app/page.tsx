@@ -123,7 +123,7 @@ export default async function Page() {
               transformative benefits of yoga to enrich their daily lives.
             </p>
             <Link href="/about" className="linkAsButton">
-              Learn more <FontAwesomeIcon icon={faAngleRight} size="sm" />
+              Learn more about me <FontAwesomeIcon icon={faAngleRight} size="sm" />
             </Link>
           </div>
         </section>

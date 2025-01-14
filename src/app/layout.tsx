@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Catalina Riser Yoga',
+    siteName: 'Catalina Riser Yoga',
+    url: 'https://www.catalinariser.yoga/',
     description:
       'Katie Innes, offers inclusive Hatha, Vinyasa, and Nidra yoga classes in Tucson, Arizona, focusing on pose safety, body positivity, and mindfulness.',
     images: [
