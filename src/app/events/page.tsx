@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { client } from '@/utils/sanity/client';
 import { urlFor } from '@/utils/sanity/image-helper';
+import * as Sentry from '@sentry/nextjs';
 
 import styles from '@/styles/Events.module.css';
 
@@ -40,6 +41,7 @@ async function getPageData(): Promise<{ events: any[] }> {
     };
   } catch (error) {
     console.error('Error getting events:', error.message);
+    Sentry.captureException(error);
     return { events: [] };
   }
 }
