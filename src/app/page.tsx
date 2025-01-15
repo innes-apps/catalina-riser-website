@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import * as Sentry from '@sentry/nextjs';
 import homeImgAbout from '../../public/img/home_1.webp';
 import homeImgOfferings from '../../public/img/home_2.webp';
 import ClassSchedule from '@/components/classSchedule/ClassSchedule';
@@ -83,6 +84,7 @@ async function getPageData(): Promise<{ schedule: Array<any>; events: Array<any>
     return { schedule, events };
   } catch (error) {
     console.error('Error fetching data:', error);
+    Sentry.captureException(error);
     return { schedule: [], events: [] };
   }
 }
