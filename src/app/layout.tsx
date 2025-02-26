@@ -7,6 +7,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
+import ShoelaceSetup from './shoelace-setup';
 import Layout from '@/components/layouts/main/Layout';
 
 export const metadata: Metadata = {
@@ -43,7 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Layout>{children}</Layout>
+        <ShoelaceSetup>
+          <Layout>{children}</Layout>
+        </ShoelaceSetup>
         <SpeedInsights />
       </body>
     </html>

@@ -38,3 +38,6 @@ next-env.d.ts
 
 # Sentry Auth Token
 .sentryclirc
+
+# Shoelace Static Assets - These are copied to the public folder during the dev/build process
+public/shoelace-assets

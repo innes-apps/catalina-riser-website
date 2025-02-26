@@ -1,9 +1,6 @@
 import styles from './Testimonial.module.css';
 
-export default function Testimonial(props : {
-  name: string;
-  quote: string;
-}) {
+export default function Testimonial(props: { name: string; quote: string }) {
   return (
     <div className={styles.testimonial}>
       <div className={styles.testimonialContent}>
@@ -14,4 +11,4 @@ export default function Testimonial(props : {
       </div>
     </div>
   );
-}) {}
+}
