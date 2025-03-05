@@ -1,4 +1,5 @@
 import { lato } from '@/utils/font-loader';
+import Testimonial from '@/components/testimonial/Testimonial';
 
 import styles from './MainLayout.module.css';
 
@@ -16,18 +17,6 @@ const testimonials = [
     name: 'Michelle L.',
     text: 'Katie has an amazing ability to adapt her teaching to all skill levels. Her peaceful energy and clear instructions make every class a joy.',
   },
-  {
-    name: 'Robert K.',
-    text: "I've been practicing yoga for years, and Katie is by far the best instructor I've had. Her knowledge of anatomy and mindful approach have deepened my practice.",
-  },
-  {
-    name: 'Emily W.',
-    text: "The meditation techniques Katie incorporates into her classes have helped me manage stress and find balance in my daily life. She's truly gifted.",
-  },
-  {
-    name: 'David P.',
-    text: "Katie's classes are the perfect blend of challenge and relaxation. Her positive energy is contagious, and I always leave feeling renewed and centered.",
-  },
 ];
 
 export default function Footer() {
@@ -36,7 +25,14 @@ export default function Footer() {
 
   return (
     <footer className={`${styles.footer} ${lato.className}`}>
-      <div className={styles.testimonialsWrapper}></div>
+      <div className={styles.testimonialsWrapper}>
+        <h2>Testimonials</h2>
+        <div className={styles.testimonials}>
+          {testimonials.map((testimonial, index) => (
+            <Testimonial key={index} name={testimonial.name} quote={testimonial.text} />
+          ))}
+        </div>
+      </div>
       <p>&copy; {year} Catalina Riser</p>
     </footer>
   );
