@@ -99,7 +99,7 @@
 
 .socialMedia {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -107,6 +107,14 @@
   justify-items: center;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
+}
+
+.socialMedia p {
+  grid-column: span 2;
+}
+
+.socialMedia a {
+  grid-column: span 1;
 }
 
 @media screen and (min-width: 1025px) {
