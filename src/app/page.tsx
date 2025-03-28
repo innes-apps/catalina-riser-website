@@ -227,7 +227,14 @@ export default async function Page() {
             className="linkAsButton"
             target="_blank"
           >
-            @catalinariseryoga <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
+            On Instagram @catalinariseryoga <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
+          </Link>
+          <Link
+            href="https://yoga.us11.list-manage.com/subscribe?u=19636d1c2160b696644700e5e&id=16df616173"
+            className="linkAsButton"
+            target="_blank"
+          >
+            Join the Mailing List! <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
           </Link>
         </section>
       </div>
