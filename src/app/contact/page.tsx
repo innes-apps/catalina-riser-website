@@ -87,7 +87,7 @@ export default function Contact() {
               className="linkAsButton"
               target="_blank"
             >
-              Sign up for my monthly news letter!{' '}
+              Sign up for my monthly newsletter!{' '}
               <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />
             </Link>
           </div>
