@@ -39,6 +39,17 @@
   text-align: center;
 }
 
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.25rem 0;
+}
+
 @media screen and (max-width: 650px) {
   .header {
     display: none;
@@ -86,5 +97,10 @@
 
   .mobileNav a:last-of-type {
     border-right: none;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
   }
 }
