@@ -83,7 +83,7 @@ export default function Contact() {
           <div className={styles.cta}>
             <p className={styles.copy}>Be the first to know about upcoming events!</p>
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSf0SoWO-ulX3OgWTo1bkS1z0h2LvUjx6Sh4dL9uQk7_OFTGqQ/viewform?usp=sf_link"
+              href="https://yoga.us11.list-manage.com/subscribe?u=19636d1c2160b696644700e5e&id=16df616173"
               className="linkAsButton"
               target="_blank"
             >
