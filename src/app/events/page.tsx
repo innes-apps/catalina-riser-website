@@ -107,14 +107,16 @@ export default async function Events() {
                       <p>{event.description}</p>
                     </div>
 
-                    <Link
-                      href={event.signUpLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`linkAsButton ${styles.eventSignUpLink}`}
-                    >
-                      <FontAwesomeIcon icon={faLink} size="sm" /> Sign Up!
-                    </Link>
+                    {event.signUpLink && (
+                      <Link
+                        href={event.signUpLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`linkAsButton ${styles.eventSignUpLink}`}
+                      >
+                        <FontAwesomeIcon icon={faLink} size="sm" /> Sign Up!
+                      </Link>
+                    )}
                   </div>
                 </div>
               );
