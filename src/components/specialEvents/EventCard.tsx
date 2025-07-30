@@ -42,16 +42,18 @@ export default function EventCard(props: {
           </div>
         </div>
 
-        <div className={styles.ctaWrapper}>
-          <Link
-            href={props.signUpLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="linkAsButton"
-          >
-            <FontAwesomeIcon icon={faLink} size="sm" /> Sign Up!
-          </Link>
-        </div>
+        {props.signUpLink && (
+          <div className={styles.ctaWrapper}>
+            <Link
+              href={props.signUpLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="linkAsButton"
+            >
+              <FontAwesomeIcon icon={faLink} size="sm" /> Sign Up!
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
