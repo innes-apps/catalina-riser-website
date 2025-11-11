@@ -117,12 +117,12 @@ export default async function Page() {
           <div className={styles.sectionContent}>
             <h2 className={rofane.className}>Hi I&apos;m Katie!</h2>
             <p className={styles.copy}>
-              I am a 200-RYT certified yoga instructor, with experience teaching in Hatha, Vinyasa,
-              and Nidra styles. With over a decade of in-studio yoga practice, my passion lies in
-              expanding yoga and mindfulness to all age levels, including children, with a strong
-              focus on pose safety, body positivity, and inclusivity. My goal is to foster a safe
-              and inclusive space where individuals can deepen their yoga practice and allow the
-              transformative benefits of yoga to enrich their daily lives.
+              I am an E-RYT 200 certified yoga instructor, with experience teaching in Hatha,
+              Vinyasa, and Nidra styles. With over a decade of in-studio yoga practice, my passion
+              lies in expanding yoga and mindfulness to all age levels, including children, with a
+              strong focus on pose safety, body positivity, and inclusivity. My goal is to foster a
+              safe and inclusive space where individuals can deepen their yoga practice and allow
+              the transformative benefits of yoga to enrich their daily lives.
             </p>
             <Link href="/about" className="linkAsButton">
               Learn more about me <FontAwesomeIcon icon={faAngleRight} size="sm" />

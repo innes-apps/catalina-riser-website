@@ -46,7 +46,7 @@ export default function About() {
               My journey with yoga began in 2003 in high school. Since that first encounter, it has
               become a foundation and passion; but my yoga journey extends beyond the mat. Over the
               years I felt a strong calling to share the transformative power of yoga with others
-              so, in 2022 I began pursuing my 200-RYT certificate. While working towards its
+              so, in 2022 I began pursuing my RYT 200 certificate. While working towards its
               completion, I started offering classes in a local park where I&apos;ve had the
               privilege of teaching a diverse group of individuals, including military veterans,
               from diverse backgrounds and skill levels. This experience reinforced my belief in the
